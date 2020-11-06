@@ -3,17 +3,25 @@
 ```
 
 ```
+## [0.0.5] 
+### Added
+- The Fingers Used and Fret Positions input fields are enabled/disabled based on the Number of Strings dropdown menu selection
+- All interactable UI elements, expept buttons, are storing in to prefs object
+### Removed
+- The rest alert dialog triggers on event listeners callback functions except buttons
+
 ## [0.0.4] Initial commit on GitHub
 ### Added
 - The evalInput function.
 - Evaluation of user input via evalInput.
 ### Removed
-- All the alert dialog triggers on event listeners callback functions
+- All text input alert dialog triggers on event listeners callback functions 
 
 ## [0.0.3] 
 ### Added
 - [prefs] object, it will store the user preferences
 - Functionality on "show more" check box. Now It shows/hides the line art options
+- The close button closes the main window
 ### Removed
 - The alert dialog trigger on "show more" check box
 

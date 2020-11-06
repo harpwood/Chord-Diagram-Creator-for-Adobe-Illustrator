@@ -1,15 +1,52 @@
-#target illustrator
-#targetengine 'main'
+//#target illustrator
+//#targetengine 'main'
 
 // Constants
-VERSION = "v0.4.0 beta"
+VERSION = "v0.0.5"
 LINK_ICON = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82";
 ERROR_MSG = "Some went wrong: "; 
 ERROR_TITLE = "Oops!!!";
 AUTO = "auto";
 
-prefs = {};
+NUMBER_OF_STRINGS_SELECTION  = "numberOfStringsSelection";
+NUMBER_OF_FRETS_SELECTION = "numberOfFretsSelection";
+DRAW_BARRE = "drawBarre";
+X = "x";
+Y = "y";
+CAN_REPOSITION_X        = "canRepositionX";
+CAN_REPOSITION_Y        = "canRepositionY";
+IS_REVERSED             = "isReversed";
+WIDTH                   = "width";
+HEIGHT                  = "height"; 
+RE_POS_SPACING          = "rePosSpacing";
+IS_LINK_HEIGHT_TO_FRETS = "isLinkHeightToFrets";
+IS_LINK_WIDTH_TO_HEIGHT = "isLinkWidthToHeight";
+STRING_THICKNESS        = "stringThickness";
+FRET_THICKNESS          = "fretThickness";
+IS_LINK_THICKNESS       = "isLinkThickness";
+NUT_THICKNESS           = "nutThickness";
+
+prefs = {};     // object that handles prefs data (save/load)
+// default values
+
+prefs.numberOfStringsSelection = 2;
+prefs.numberOfFretsSelection = 1;
+prefs.drawBarre = true;
 prefs.showMore = true;
+prefs.x = "0";
+prefs.y = "0";
+prefs.canRepositionX = true;
+prefs.canRepositionY = true;
+
+prefs.rePosSpacing = AUTO;
+prefs.width = "100";
+prefs.height = "100";
+prefs.isLinkHeightToFrets = true;
+prefs.isLinkWidthToHeight = true;
+prefs.isLinkThickness = true;
+prefs.stringThickness = AUTO;
+prefs.fretThickness = AUTO;
+prefs.nutThickness = AUTO;
 
 try{mainWindow = showMainWindow();}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
 mainWindow.show();
@@ -23,7 +60,7 @@ function showMainWindow()
     // MAIN WINDOW
     // ==========
     var MainWindow = new Window("window", undefined, undefined, {su1PanelCoordinates: false, maximizeButton: false, minimizeButton: false, independent: false, borderless: false, resizeable: false}); 
-        MainWindow.text = "Chord Diagram Generator For Adobe Illustrator " + VERSION; 
+        MainWindow.text = "Chord Diagram Creator for Adobe Illustrator " + VERSION; 
         MainWindow.preferredSize.width = 464; 
         MainWindow.preferredSize.height = 483; 
         MainWindow.orientation = "column"; 
@@ -65,7 +102,7 @@ function showMainWindow()
     // ==============
     var ChordNamePanel = ChordNameAndSavedGroup.add("panel", undefined, undefined, {name: "ChordNamePanel"}); 
         ChordNamePanel.text = "Chord Name"; 
-        ChordNamePanel.preferredSize.width = 130; 
+        ChordNamePanel.preferredSize.width = 120; 
         ChordNamePanel.preferredSize.height = 53; 
         ChordNamePanel.orientation = "row"; 
         ChordNamePanel.alignChildren = ["left","center"]; 
@@ -75,7 +112,7 @@ function showMainWindow()
     var ChordNameInput = ChordNamePanel.add('edittext {properties: {name: "ChordNameInput"}}');
         ChordNameInput.text = "";
         ChordNameInput.helpTip = "The name of the chord"; 
-        ChordNameInput.preferredSize.width = 89; 
+        ChordNameInput.preferredSize.width = 94; 
         ChordNameInput.preferredSize.height = 23;
 var lastChordNameInput = ChordNameInput.text;
 
@@ -117,27 +154,59 @@ var lastChordNameInput = ChordNameInput.text;
     var NumberOfStringsDropDown_array = ["4 Strings","5 Strings","6 Strings","7 Strings","8 Strings","9 Strings"]; 
     var NumberOfStringsDropDown = NumberOfStringsAndFretsPanel.add("dropdownlist", undefined, undefined, {name: "NumberOfStringsDropDown", items: NumberOfStringsDropDown_array}); 
         NumberOfStringsDropDown.helpTip = "The number of strings"; 
-        NumberOfStringsDropDown.selection = 2; 
+        NumberOfStringsDropDown.selection = prefs.numberOfStringsSelection; 
         NumberOfStringsDropDown.preferredSize.width = 80; 
         NumberOfStringsDropDown.preferredSize.height = 23; 
 
-            NumberOfStringsDropDown.onChange = function () {alert("OK");}
+            NumberOfStringsDropDown.onChange = function () 
+            {
+                prefs.numberOfStringsSelection = NumberOfStringsDropDown.selection;
+
+                for (i = 4; i < 10; i++)
+                {
+                    if (NumberOfStringsDropDown.selection == NumberOfStringsDropDown.items[i-4]) 
+                    {
+                        //change input visibility based on selected dropmenu option
+                        for (var j = 0; j < 9; j++)
+                        if (j < i) 
+                        {
+                             
+                            FingersUsedInput[j].enabled = true;
+                            FretPositionsInput[j].enabled = true;
+                        }
+                        else
+                        {
+                            FingersUsedInput[j].enabled = false;  
+                            FretPositionsInput[j].enabled = false;
+                        }
+        
+                        prefs.numberOfStringsSelection = i-4;
+                    } 
+                }
+            }
 
     var NumberOfFretsDropDown_array = ["4 Frets","5 Frets","6 Frets","7 Frets","8 Frets","9 Frets"]; 
     var NumberOfFretsDropDown = NumberOfStringsAndFretsPanel.add("dropdownlist", undefined, undefined, {name: "NumberOfFretsDropDown", items: NumberOfFretsDropDown_array}); 
         NumberOfFretsDropDown.helpTip = "The number of frets"; 
-        NumberOfFretsDropDown.selection = 1; 
+        NumberOfFretsDropDown.selection = prefs.numberOfFretsSelection; 
         NumberOfFretsDropDown.preferredSize.width = 80; 
         NumberOfFretsDropDown.preferredSize.height = 23;
 
-            NumberOfFretsDropDown.onChange = function () {alert("OK");} 
+            NumberOfFretsDropDown.onChange = function () 
+            {
+                prefs.numberOfFretsSelection = NumberOfFretsDropDown.selection;
+            } 
 
     var DrawBarreCheckBox = NumberOfStringsAndFretsPanel.add("checkbox", undefined, undefined, {name: "DrawBarreCheckBox"}); 
         DrawBarreCheckBox.helpTip = "If enabled will be drawn barre, if the same finger is on more than one string "; 
         DrawBarreCheckBox.text = "Draw Barre"; 
         DrawBarreCheckBox.alignment = ["left","center"]; 
+        DrawBarreCheckBox.value = prefs.drawBarre;
 
-            DrawBarreCheckBox.onClick = function () {alert("OK");}
+            DrawBarreCheckBox.onClick = function () 
+            {
+                prefs.drawBarre = DrawBarreCheckBox.value;
+            }
 
     // FINGERS USED PANEL //TODO LOOP
     // ================
@@ -150,37 +219,18 @@ var lastChordNameInput = ChordNameInput.text;
         FingersUsedPanel.spacing = 6; 
         FingersUsedPanel.margins = 10; 
 
-    var FingersUsedInput = FingersUsedPanel.add('edittext {properties: {name: "FingersUsedInput"}}'); 
-        FingersUsedInput.helpTip = "Write here the finger that is used on the Xth string. \n T - Thumb, 1- Index, 2 - Middle, 3 - Ring, 4- Pinky\nIf not used any finger, leave it empty."; 
-        FingersUsedInput.preferredSize.width = 27; 
-        FingersUsedInput.preferredSize.height = 23; 
+        var FingersUsedInput = [];
+        for (var i = 0; i < 9; i++)
+        {
+            var FingersUsedInputItem = FingersUsedPanel.add('edittext {properties: {name: "FingersUsedInput"}}'); 
+                FingersUsedInputItem.helpTip = "Write here the finger that is used on the Xth string. \n T - Thumb, 1- Index, 2 - Middle, 3 - Ring, 4- Pinky\nIf not used any finger, leave it empty."; 
+                FingersUsedInputItem.preferredSize.width = 27; 
+                FingersUsedInputItem.preferredSize.height = 23;
 
-    var edittext1 = FingersUsedPanel.add('edittext {properties: {name: "edittext1"}}'); 
-        edittext1.preferredSize.width = 27; 
-
-    var edittext2 = FingersUsedPanel.add('edittext {properties: {name: "edittext2"}}'); 
-        edittext2.preferredSize.width = 27; 
-
-    var edittext3 = FingersUsedPanel.add('edittext {properties: {name: "edittext3"}}'); 
-        edittext3.preferredSize.width = 27; 
-
-    var edittext4 = FingersUsedPanel.add('edittext {properties: {name: "edittext4"}}'); 
-        edittext4.preferredSize.width = 27; 
-
-    var edittext5 = FingersUsedPanel.add('edittext {properties: {name: "edittext5"}}'); 
-        edittext5.preferredSize.width = 27; 
-
-    var edittext6 = FingersUsedPanel.add('edittext {properties: {name: "edittext6"}}'); 
-        edittext6.enabled = false; 
-        edittext6.preferredSize.width = 27; 
-
-    var edittext7 = FingersUsedPanel.add('edittext {properties: {name: "edittext7"}}'); 
-        edittext7.enabled = false; 
-        edittext7.preferredSize.width = 27; 
-
-    var edittext8 = FingersUsedPanel.add('edittext {properties: {name: "edittext8"}}'); 
-        edittext8.enabled = false; 
-        edittext8.preferredSize.width = 27; 
+                if (i > prefs.numberOfStringsSelection + 3) FingersUsedInputItem.enabled = false;
+            
+            FingersUsedInput.push(FingersUsedInputItem);
+        }
 
     // FRET POSITIONS //TODO LOOP
     // =============
@@ -192,38 +242,20 @@ var lastChordNameInput = ChordNameInput.text;
         FretPositions.alignChildren = ["left","center"]; 
         FretPositions.spacing = 6; 
         FretPositions.margins = 10; 
+        
+        var FretPositionsInput = [];
 
-    var FretPositionsInput = FretPositions.add('edittext {properties: {name: "FretPositionsInput"}}'); 
-        FretPositionsInput.helpTip = "Write here the fret number that the finger is pressing on the  Xth string. \n 0 - Open string, o - Open string, x or emty - not used string "; 
-        FretPositionsInput.preferredSize.width = 27; 
-        FretPositionsInput.preferredSize.height = 23; 
-
-    var edittext9 = FretPositions.add('edittext {properties: {name: "edittext9"}}'); 
-        edittext9.preferredSize.width = 27; 
-
-    var edittext10 = FretPositions.add('edittext {properties: {name: "edittext10"}}'); 
-        edittext10.preferredSize.width = 27; 
-
-    var edittext11 = FretPositions.add('edittext {properties: {name: "edittext11"}}'); 
-        edittext11.preferredSize.width = 27; 
-
-    var edittext12 = FretPositions.add('edittext {properties: {name: "edittext12"}}'); 
-        edittext12.preferredSize.width = 27; 
-
-    var edittext13 = FretPositions.add('edittext {properties: {name: "edittext13"}}'); 
-        edittext13.preferredSize.width = 27; 
-
-    var edittext14 = FretPositions.add('edittext {properties: {name: "edittext14"}}'); 
-        edittext14.enabled = false; 
-        edittext14.preferredSize.width = 27; 
-
-    var edittext15 = FretPositions.add('edittext {properties: {name: "edittext15"}}'); 
-        edittext15.enabled = false; 
-        edittext15.preferredSize.width = 27; 
-
-    var edittext16 = FretPositions.add('edittext {properties: {name: "edittext16"}}'); 
-        edittext16.enabled = false; 
-        edittext16.preferredSize.width = 27; 
+        for (var i = 0; i < 9; i++)
+        {
+            var FretPositionsInputItem = FretPositions.add('edittext {properties: {name: "FretPositionsInput"}}'); 
+                FretPositionsInputItem.helpTip = "Write here the fret number that the finger is pressing on the  Xth string. \n 0 - Open string, o - Open string, x or emty - not used string "; 
+                FretPositionsInputItem.preferredSize.width = 27; 
+                FretPositionsInputItem.preferredSize.height = 23; 
+            
+            if (i > prefs.numberOfStringsSelection + 3) FretPositionsInputItem.enabled = false;
+            
+            FretPositionsInput.push(FretPositionsInputItem);
+        }
 
     // MAIN TOP GROUP
     // ============
@@ -380,7 +412,7 @@ var lastChordNameInput = ChordNameInput.text;
 
     var PositioningXInput = PositioningXGroup.add('edittext {properties: {name: "PositioningXInput"}}'); 
         PositioningXInput.helpTip = "The x position that chord will be drawn on Artboard"; 
-        PositioningXInput.text = "0"; 
+        PositioningXInput.text = prefs.x; 
         PositioningXInput.preferredSize.width = 50; 
         PositioningXInput.preferredSize.height = 23; 
         PositioningXInput.alignment = ["left","center"];
@@ -390,6 +422,7 @@ var lastPositioningXInput = PositioningXInput.text;
             {
                 PositioningXInput.text = evalInput(PositioningXInput.text, lastPositioningXInput);
                 lastPositioningXInput = PositioningXInput.text;
+                prefs.x = PositioningXInput.text;
             }
 
     // POSITIONING Y GROUP
@@ -411,7 +444,7 @@ var lastPositioningXInput = PositioningXInput.text;
 
     var PositioningYInput = PositioningYGroup.add('edittext {properties: {name: "PositioningYInput"}}'); 
         PositioningYInput.helpTip = "The y position that chord will be drawn on Artboard"; 
-        PositioningYInput.text = "0"; 
+        PositioningYInput.text = prefs.y; 
         PositioningYInput.preferredSize.width = 50; 
         PositioningYInput.preferredSize.height = 23; 
         PositioningYInput.alignment = ["left","center"];
@@ -421,6 +454,7 @@ var lastPositioningYInput = PositioningYInput.text;
             {
                 PositioningYInput.text = evalInput(PositioningYInput.text, lastPositioningYInput);
                 lastPositioningYInput = PositioningYInput.text;
+                prefs.y = PositioningYInput.text;
             }
 
     // REPOSITIONING PANEL
@@ -450,8 +484,12 @@ var lastPositioningYInput = PositioningYInput.text;
         ReposXCheckBox.preferredSize.width = 27; 
         ReposXCheckBox.preferredSize.height = 14; 
         ReposXCheckBox.alignment = ["center","center"];
+        ReposXCheckBox.value = prefs.canRepositionX;
 
-            ReposXCheckBox.onClick = function() {alert("OK");} 
+            ReposXCheckBox.onClick = function() 
+            {
+                prefs.canRepositionX = ReposXCheckBox.value;
+            } 
 
     var ReposYCheckBox = RepositioningGroup.add("checkbox", undefined, undefined, {name: "ReposYCheckBox"}); 
         ReposYCheckBox.helpTip = "If enabled after drawing a chord, the next chord will be drawn upwards on y axis,\n by the amount specified in spacing. For opposite direction, use a negative number   "; 
@@ -459,8 +497,12 @@ var lastPositioningYInput = PositioningYInput.text;
         ReposYCheckBox.preferredSize.width = 27; 
         ReposYCheckBox.preferredSize.height = 14; 
         ReposYCheckBox.alignment = ["center","center"];
+        ReposYCheckBox.value = prefs.canRepositionY;
 
-             ReposYCheckBox.onClick = function() {alert("OK");}
+            ReposYCheckBox.onClick = function() 
+            {
+                prefs.canRepositionY = ReposYCheckBox.value;
+            } 
 
     // REPOS SPACING GROUP
     // =================
@@ -479,7 +521,7 @@ var lastPositioningYInput = PositioningYInput.text;
 
     var ReposSpacingInput = ReposSpacingGroup.add('edittext {properties: {name: "ReposSpacingInput"}}'); 
         ReposSpacingInput.helpTip = "The amount  in distance in px that next chord diagram will  be drawn. For\nopposite direction, use a negative number.  If the value is not numerical \nthe spacing will be calculated automatically "; 
-        ReposSpacingInput.text = "auto"; 
+        ReposSpacingInput.text = prefs.rePosSpacing; 
         ReposSpacingInput.preferredSize.width = 55; 
         ReposSpacingInput.preferredSize.height = 23;
 var lastReposSpacingInput = ReposSpacingInput.text;
@@ -488,6 +530,7 @@ var lastReposSpacingInput = ReposSpacingInput.text;
             {
                 ReposSpacingInput.text = evalInput(ReposSpacingInput.text, lastReposSpacingInput, true);
                 lastReposSpacingInput = ReposSpacingInput.text;
+                prefs.rePosSpacing = ReposSpacingInput.text;
             } 
 
     // DIAGRAM SIZE GROUP
@@ -529,7 +572,7 @@ var lastReposSpacingInput = ReposSpacingInput.text;
 
     var DiagramWidthInput = DiagramWidthGroup.add('edittext {properties: {name: "DiagramWidthInput"}}'); 
         DiagramWidthInput.helpTip = "The width of the chord diagram.\n If the value is not numerical  the width will be calculated automatically  "; 
-        DiagramWidthInput.text = "100"; 
+        DiagramWidthInput.text = prefs.width; 
         DiagramWidthInput.preferredSize.width = 45; 
         DiagramWidthInput.preferredSize.height = 23; 
         DiagramWidthInput.alignment = ["left","center"]; 
@@ -538,6 +581,7 @@ var lastDiagramWidthInput = DiagramWidthInput.text;
             {
                 DiagramWidthInput.text = evalInput(DiagramWidthInput.text, lastDiagramWidthInput);
                 lastDiagramWidthInput = DiagramWidthInput.text;
+                prefs.width = DiagramWidthInput.text;
             }
 
     // LINK WIDTH TO HEIGHT GROUP
@@ -556,8 +600,12 @@ var lastDiagramWidthInput = DiagramWidthInput.text;
         LinkWidthToHeightCheckBox.preferredSize.width = 18; 
         LinkWidthToHeightCheckBox.preferredSize.height = 14; 
         LinkWidthToHeightCheckBox.alignment = ["center","center"]; 
+        LinkWidthToHeightCheckBox.value = prefs.isLinkWidthToHeight; 
 
-            LinkWidthToHeightCheckBox.onClick = function(){alert("OK");}
+            LinkWidthToHeightCheckBox.onClick = function()
+            {
+                prefs.isLinkWidthToHeight = LinkWidthToHeightCheckBox.value;
+            }
 
     var LinkWidthToHeightImage = LinkWidthToHeightGroup.add("image", undefined, File.decode(LINK_ICON), {name: "LinkWidthToHeightImage"}); 
         LinkWidthToHeightImage.alignment = ["center","center"]; 
@@ -580,7 +628,7 @@ var lastDiagramWidthInput = DiagramWidthInput.text;
 
     var DiagramHeightInput = DiagramHeightGroup.add('edittext {properties: {name: "DiagramHeightInput"}}'); 
         DiagramHeightInput.helpTip = "The height of the chord diagram"; 
-        DiagramHeightInput.text = "100"; 
+        DiagramHeightInput.text = prefs.height; 
         DiagramHeightInput.preferredSize.width = 45; 
         DiagramHeightInput.preferredSize.height = 23; 
         DiagramHeightInput.alignment = ["center","center"]; 
@@ -589,6 +637,7 @@ var lastDiagramHeightInput = DiagramHeightInput.text;
             {
                 DiagramHeightInput.text = evalInput(DiagramHeightInput.text, lastDiagramHeightInput);
                 lastDiagramHeightInput = DiagramHeightInput.text;
+                prefs.height = DiagramHeightInput.text;
             }
 
     // LINK HEIGHT TO FRETS GROUP
@@ -606,8 +655,12 @@ var lastDiagramHeightInput = DiagramHeightInput.text;
         LinkHeightToFretsCheckBox.preferredSize.width = 18; 
         LinkHeightToFretsCheckBox.preferredSize.height = 14; 
         LinkHeightToFretsCheckBox.alignment = ["center","center"];
+        LinkHeightToFretsCheckBox.value = prefs.isLinkHeightToFrets;
 
-            LinkHeightToFretsCheckBox.onClick = function(){alert("OK");} 
+            LinkHeightToFretsCheckBox.onClick = function()
+            {
+                prefs.isLinkHeightToFrets = LinkHeightToFretsCheckBox.value;
+            } 
 
     var LinkHeightToFretsImage = LinkHeightToFretsGroup.add("image", undefined, File.decode(LINK_ICON), {name: "LinkHeightToFretsImage"}); 
         LinkHeightToFretsImage.alignment = ["center","center"]; 
@@ -657,7 +710,7 @@ var lastDiagramHeightInput = DiagramHeightInput.text;
 
     var LineArtThicknessStringsInput = LineArtThicknessStringsGroup.add('edittext {properties: {name: "LineArtThicknessStringsInput"}}'); 
         LineArtThicknessStringsInput.helpTip = "The thickness of the line art that represents the strings"; 
-        LineArtThicknessStringsInput.text = "auto"; 
+        LineArtThicknessStringsInput.text = prefs.stringThickness; 
         LineArtThicknessStringsInput.preferredSize.width = 42; 
         LineArtThicknessStringsInput.preferredSize.height = 23; 
         LineArtThicknessStringsInput.alignment = ["left","center"];
@@ -667,6 +720,7 @@ var lastLineArtThicknessStringsInput = LineArtThicknessStringsInput.text;
             {
                 LineArtThicknessStringsInput.text = evalInput(LineArtThicknessStringsInput.text, lastLineArtThicknessStringsInput, true);
                 lastLineArtThicknessStringsInput = LineArtThicknessStringsInput.text;
+                prefs.stringThickness = LineArtThicknessStringsInput.text;
             } 
 
     // LINK STRING TO FRETS THICKNESS GROUP
@@ -685,10 +739,14 @@ var lastLineArtThicknessStringsInput = LineArtThicknessStringsInput.text;
         LinkStringToFretsThicknessCheckBox.preferredSize.width = 18; 
         LinkStringToFretsThicknessCheckBox.preferredSize.height = 14; 
         LinkStringToFretsThicknessCheckBox.alignment = ["left","center"];
+        LinkStringToFretsThicknessCheckBox.value = prefs.isLinkThickness;
 
-            LinkStringToFretsThicknessCheckBox.onClick = function(){alert("OK");}  
+            LinkStringToFretsThicknessCheckBox.onClick = function()
+            {
+                prefs.isLinkThickness = LinkStringToFretsThicknessCheckBox.value;
+            }  
 
-    var LinkStringToFretsThicknessImage = LinkStringToFretsThicknessGroup.add("image", undefined, File.decode(LinkWidthToHeightImage_imgString), {name: "LinkStringToFretsThicknessImage"}); 
+    var LinkStringToFretsThicknessImage = LinkStringToFretsThicknessGroup.add("image", undefined, File.decode(LINK_ICON), {name: "LinkStringToFretsThicknessImage"}); 
 
     // LINE ART THICKNESS FRETS GROUP
     // ==========================
@@ -708,7 +766,7 @@ var lastLineArtThicknessStringsInput = LineArtThicknessStringsInput.text;
 
     var LineArtThicknessFretsInput = LineArtThicknessFretsGroup.add('edittext {properties: {name: "LineArtThicknessFretsInput"}}'); 
         LineArtThicknessFretsInput.helpTip = "The thickness of the line art that represents the frets"; 
-        LineArtThicknessFretsInput.text = "auto"; 
+        LineArtThicknessFretsInput.text = prefs.fretThickness; 
         LineArtThicknessFretsInput.preferredSize.width = 42; 
         LineArtThicknessFretsInput.preferredSize.height = 23; 
         LineArtThicknessFretsInput.alignment = ["left","center"]; 
@@ -718,6 +776,7 @@ var lastLineArtThicknessFretsInput = LineArtThicknessFretsInput.text;
             {
                 LineArtThicknessFretsInput.text = evalInput(LineArtThicknessFretsInput.text, lastLineArtThicknessFretsInput, true);
                 lastLineArtThicknessFretsInput = LineArtThicknessFretsInput.text;
+                prefs.fretThickness = LineArtThicknessFretsInput.text;
             } 
 
     // LINE ART THICKNESS NUT GROUP
@@ -738,7 +797,7 @@ var lastLineArtThicknessFretsInput = LineArtThicknessFretsInput.text;
 
     var LineArtThicknessNutInput = LineArtThicknessNutGroup.add('edittext {properties: {name: "LineArtThicknessNutInput"}}'); 
         LineArtThicknessNutInput.helpTip = "The thickness of the line art that represents the nut"; 
-        LineArtThicknessNutInput.text = "auto"; 
+        LineArtThicknessNutInput.text = prefs.nutThickness; 
         LineArtThicknessNutInput.preferredSize.width = 42; 
         LineArtThicknessNutInput.preferredSize.height = 23; 
         LineArtThicknessNutInput.alignment = ["right","center"];
@@ -748,6 +807,7 @@ var lastLineArtThicknessNutInput = LineArtThicknessNutInput.text;
             {
                 LineArtThicknessNutInput.text = evalInput(LineArtThicknessNutInput.text, lastLineArtThicknessNutInput, true);
                 lastLineArtThicknessNutInput = LineArtThicknessNutInput.text;
+                prefs.nutThickness = LineArtThicknessNutInput.text;
             } 
 
     // LINE ART THICKNESS GROUP
