@@ -3,10 +3,17 @@
 ```
 
 ```
-## [0.0.5] 
+## [0.1.3] 
 ### Added
+- preferences data enumeration 
+- lock icons/check boxes on every panel
 - The Fingers Used and Fret Positions input fields are enabled/disabled based on the Number of Strings dropdown menu selection
 - All interactable UI elements, expept buttons, are storing in to prefs object
+- Minified json2 code https://github.com/douglascrockford/JSON-js
+- The user input  autoload and autosave as prefs obj into file. If the file is not found a new file is created and the default settings are included. Excluded chord name and fingerings.
+- getIndexOf and getLastIndexOf functions
+- setDefaultAt function
+- Loaded prefs data evaluation, if evaluation fails assing default value via setDefaultAt function
 ### Removed
 - The rest alert dialog triggers on event listeners callback functions except buttons
 
