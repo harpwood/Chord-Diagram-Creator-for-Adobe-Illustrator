@@ -3,6 +3,13 @@
 ```
 
 ```
+## [0.1.7] 
+### Added
+- the fuctionality of prefs.isLinkWidthToHeight. Now if enabled, diagram width and height will change by the rule of three
+- the fuctionality of prefs.isLinkThickness. Now if enabled, The thickness of strings and frets will change by the rule of three
+- the fuctionality of prefs.isLinkHeightToFrets. Now if enabled, the diagram height will change along with the strings and frets dropdown menus.
+- The functionality of [New Chord] button. Now the button will reset the panels, [Chord Name], [Number of Strings and Frets], [Fingers Used] and [Fret Positions] if they are not locked  
+
 ## [0.1.3] 
 ### Added
 - preferences data enumeration 
@@ -14,6 +21,7 @@
 - getIndexOf and getLastIndexOf functions
 - setDefaultAt function
 - Loaded prefs data evaluation, if evaluation fails assing default value via setDefaultAt function
+- btExcecute function. Now the script is compliant to Adobe Illustrator security
 ### Removed
 - The rest alert dialog triggers on event listeners callback functions except buttons
 
