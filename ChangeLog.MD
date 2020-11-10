@@ -3,6 +3,11 @@
 ```
 
 ```
+## [0.1.9] 
+### Added
+- quit confirmation dialog box
+- lock warning dialog box
+
 ## [0.1.7] 
 ### Added
 - the fuctionality of prefs.isLinkWidthToHeight. Now if enabled, diagram width and height will change by the rule of three

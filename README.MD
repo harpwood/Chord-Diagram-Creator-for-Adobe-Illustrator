@@ -1,4 +1,4 @@
-# Chord Diagram Creator for Adobe Illustrator v0.1.7
+# Chord Diagram Creator for Adobe Illustrator v0.1.9
 
 
 

@@ -3,14 +3,15 @@
 
 
 // Constants
-PrefID = {version:0,chordNameLock:1,numberOfStringsSelection:2,numberOfFretsSelection:3,drawBarre:4,fingersUsedLock:5,fretPositionsLock:6,isNumberOfStringsAndFretsLock:7,showMore:8,x:9,y:10,positioningLock:11,canRepositionX:12,canRepositionY:13,rePosSpacing:14,repositioningLock:15,width:16,isLinkWidthToHeight:17,height:18,isLinkHeightToFrets:19,diagramSizeLock:20,stringThickness:21,isLinkThickness:22,fretThickness:23,nutThickness:24,lineArtThicknessLock:25,size:26};
+PrefID = {version:0,chordNameLock:1,numberOfStringsSelection:2,numberOfFretsSelection:3,drawBarre:4,fingersUsedLock:5,fretPositionsLock:6,isNumberOfStringsAndFretsLock:7,showMore:8,x:9,y:10,positioningLock:11,canRepositionX:12,canRepositionY:13,rePosSpacing:14,repositioningLock:15,width:16,isLinkWidthToHeight:17,height:18,isLinkHeightToFrets:19,diagramSizeLock:20,stringThickness:21,isLinkThickness:22,fretThickness:23,nutThickness:24,lineArtThicknessLock:25,quitByDefault:26,unlockByDefault:27,size:28};
+DEBUG                               = false;
 WINDOW_WIDTH                        = 500;
 WINDOW_HEIGHT_SMALL                 = 278;
 WINDOW_HEIGHT_BIG                   = 490;
-VERSION                             = "v0.1.7"
+VERSION                             = "v0.1.9"
 LINK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82";
 LOCK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0E%08%06%00%00%00%16%C2%A3%C2%8D%C2%AB%00%00%00%09pHYs%00%00%000%00%00%000%011Y'%C3%BA%00%00%00%C2%9BIDAT(%C2%91%7D%C2%90%C3%AB%0D%C3%820%0C%C2%84%C2%AF%C2%88%C3%9F%C2%A6%23u%C2%842I%C3%95%09%60%03%60%C2%82%C2%8E%00%1B%C3%90%11%60%12%C3%90-Pt%C3%88%C2%91%2C%2B%C3%8AIV%C2%AC%C3%8B%17%3F%02%C2%89dOr!%C2%B9%C2%A5%C2%B8%C3%80%C2%B5%C3%B7%C3%B3%04%60%040%03x%C2%B97%C3%88'%093%C2%9BKE%C2%BD%3E%23I%1E%C3%89%C2%8F%C3%9C%5D%C2%B8Z3%C3%A8%5E%C2%9F%C3%81%C2%A6%3A%C2%92O%C2%9F%C2%A7%C2%A5U%C3%A0%C2%96%C2%80%C2%87%C2%9Fc4s%C3%AB%C2%AB%C2%99%1D%15%C3%8A%5B%C3%A0%3B%C3%A4%C3%BF%25%C2%8Ar%C3%AB%2F%00U%13t%C2%8F%60%C3%B9%C3%B0X%C2%A5%C2%BAX%06%C2%A5C%0D%C2%ACm%5D%C2%95*j%C2%A6%C2%A9I%01%C2%B7%1F3%C3%AFG%02T%05%C3%AC%26%00%00%00%00IEND%C2%AEB%60%C2%82"; 
-ERROR_MSG                           = "Some went wrong: "; 
+ERROR_MSG                           = "Something went wrong: "; 
 ERROR_TITLE                         = "Oops!!!";
 AUTO                                = "auto";
 PREFS_FILE                          = Folder.userData + "/ChordDiagramsPrefs.json";
@@ -40,6 +41,8 @@ FRET_THICKNESS                      = "fretThickness";
 IS_LINK_THICKNESS                   = "isLinkThickness";
 NUT_THICKNESS                       = "nutThickness";
 LINE_ART_THICKNESS_LOCK             = "lineArtThicknessLock";
+QUIT_BY_DEFAULT                     = "quitByDefault";
+UNLOCK_BY_DEFAULT                   = "unlockByDefault";
 
 init();
 
@@ -47,6 +50,8 @@ function loadPreferences()
 {
     prefs = {};     // object that handles prefs data (save/load)
     var prefsFile = File(PREFS_FILE); 
+
+    if (DEBUG && prefsFile.exists) prefsFile.remove(); 
 
     if (!prefsFile.exists)  
     {
@@ -77,6 +82,8 @@ function loadPreferences()
         setDefaultAt(PrefID.fretThickness);
         setDefaultAt(PrefID.nutThickness);   
         setDefaultAt(PrefID.lineArtThicknessLock);   
+        setDefaultAt(PrefID.quitByDefault);   
+        setDefaultAt(PrefID.unlockByDefault);   
     }
     else
     {
@@ -187,7 +194,6 @@ function loadPreferences()
                     prefs.isLinkHeightToFrets = (data[i] == undefined) ? setDefaultAt(PrefID.isLinkHeightToFrets) : data[i];
                     checkData[PrefID.isLinkHeightToFrets] = true;
                     break;
-                 
                 case STRING_THICKNESS:
                     prefs.stringThickness = (data[i] == undefined) ? setDefaultAt(PrefID.stringThickness) : data[i];
                     checkData[PrefID.stringThickness] = true;
@@ -207,6 +213,14 @@ function loadPreferences()
                 case LINE_ART_THICKNESS_LOCK:
                     prefs.lineArtThicknessLock = (data[i] == undefined) ? setDefaultAt(PrefID.lineArtThicknessLock) : data[i];
                     checkData[PrefID.lineArtThicknessLock] = true;
+                    break; 
+                case QUIT_BY_DEFAULT:
+                    prefs.quitByDefault = (data[i] == undefined) ? setDefaultAt(PrefID.quitByDefault) : data[i];
+                    checkData[PrefID.quitByDefault] = true;
+                    break; 
+                case UNLOCK_BY_DEFAULT:
+                    prefs.unlockByDefault = (data[i] == undefined) ? setDefaultAt(PrefID.unlockByDefault) : data[i];
+                    checkData[PrefID.unlockByDefault] = true;
                     break; 
             }
         }
@@ -230,7 +244,15 @@ function loadPreferences()
 
 }
 
+// Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 150	 Text: MainWindow
 
+// ooo        ooooo            o8o              oooooo   oooooo     oooo  o8o                    .o8                             
+// `88.       .888'            `"'               `888.    `888.     .8'   `"'                   "888                             
+//  888b     d'888   .oooo.   oooo  ooo. .oo.     `888.   .8888.   .8'   oooo  ooo. .oo.    .oooo888   .ooooo.  oooo oooo    ooo 
+//  8 Y88. .P  888  `P  )88b  `888  `888P"Y88b     `888  .8'`888. .8'    `888  `888P"Y88b  d88' `888  d88' `88b  `88. `88.  .8'  
+//  8  `888'   888   .oP"888   888   888   888      `888.8'  `888.8'      888   888   888  888   888  888   888   `88..]88..8'   
+//  8    Y     888  d8(  888   888   888   888       `888'    `888'       888   888   888  888   888  888   888    `888'`888'    
+// o8o        o888o `Y888""8o o888o o888o o888o       `8'      `8'       o888o o888o o888o `Y8bod88P" `Y8bod8P'     `8'  `8'     
 
 /**
 * Creates the main window UI. Returns the reference of the main window UI
@@ -257,7 +279,7 @@ function showMainWindow()
         MainTopGroup.alignChildren = ["left","top"]; 
         MainTopGroup.spacing = 10; 
         MainTopGroup.margins = 0; 
-
+        
     // MAIN CHORD GROUP
     // ==============
     var MainChordGroup = MainTopGroup.add("group", undefined, {name: "MainChordGroup"}); 
@@ -288,7 +310,7 @@ function showMainWindow()
         ChordNamePanel.alignChildren = ["left","center"]; 
         ChordNamePanel.spacing = 5; 
         ChordNamePanel.margins = [10,10,10,10]; 
-
+        
     var ChordNameInput = ChordNamePanel.add('edittext {properties: {name: "ChordNameInput"}}');
         ChordNameInput.text = "";
         ChordNameInput.helpTip = "The name of the chord"; 
@@ -618,37 +640,42 @@ var lastChordNameInput = ChordNameInput.text;
 
             NewChordBtn.onClick = function () 
             {
-                if(!ChordNameLockGroupLockCheckBox.value) ChordNameInput.text = "";
-
-                if(!prefs.isNumberOfStringsAndFretsLock)
+                if(ChordNameLockGroupLockCheckBox.value && NumberOfStringsAndFretsPanelLockCheckBox.value && FingersUsedLockCheckBox.value &&  FretPositionsLockCheckBox.value)
                 {
-                    setDefaultAt(PrefID.numberOfStringsSelection);
-                    NumberOfStringsDropDown.selection = prefs.numberOfStringsSelection;
-                    
-                    setDefaultAt(PrefID.numberOfFretsSelection);
-                    NumberOfFretsDropDown.selection = prefs.numberOfFretsSelection;
-                    
-                    setDefaultAt(PrefID.drawBarre);
-                    DrawBarreCheckBox.value = prefs.drawBarre;
+                    if(!prefs.unlockByDefault) showLockWarningDialog();
                 }
-                
-                if(!FingersUsedLockCheckBox.value)
+                else
                 {
-                    for (var i = 0; i < FingersUsedInput.length; i++)
+                    if(!ChordNameLockGroupLockCheckBox.value) ChordNameInput.text = "";
+
+                    if(!NumberOfStringsAndFretsPanelLockCheckBox.value)
                     {
-                        FingersUsedInput[i].text = "";
+                        setDefaultAt(PrefID.numberOfStringsSelection);
+                        NumberOfStringsDropDown.selection = prefs.numberOfStringsSelection;
+                        
+                        setDefaultAt(PrefID.numberOfFretsSelection);
+                        NumberOfFretsDropDown.selection = prefs.numberOfFretsSelection;
+                        
+                        setDefaultAt(PrefID.drawBarre);
+                        DrawBarreCheckBox.value = prefs.drawBarre;
+                    }
+                    
+                    if(!FingersUsedLockCheckBox.value)
+                    {
+                        for (var i = 0; i < FingersUsedInput.length; i++)
+                        {
+                            FingersUsedInput[i].text = "";
+                        }
+                    }
+
+                    if(!FretPositionsLockCheckBox.value)
+                    {
+                        for (var i = 0; i < FretPositionsInput.length; i++)
+                        {
+                            FretPositionsInput[i].text = "";
+                        }
                     }
                 }
-
-                if(!FretPositionsLockCheckBox.value)
-                {
-                    for (var i = 0; i < FretPositionsInput.length; i++)
-                    {
-                        FretPositionsInput[i].text = "";
-                    }
-                }
-
-            
                 try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
             } 
 
@@ -700,10 +727,11 @@ var lastChordNameInput = ChordNameInput.text;
 
             CloseBtn.onClick = function () 
             {
-                MainWindow.close();
+                if(prefs.quitByDefault) MainWindow.close();
+                    else showQuitWarningDialog();
             
-                try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
-            } //TODO Confirm exit
+                //try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
+            } 
 
     // SHOW MORE GROUP
     // =============
@@ -1375,62 +1403,69 @@ var lastLineArtThicknessNutInput = LineArtThicknessNutInput.text;
     // LINE ART THICKNESS GROUP
     // =====================
     var ResetLineArtBtn = LineArtThicknessGroup.add("button", undefined, undefined, {name: "ResetLineArtBtn"}); 
-        ResetLineArtBtn.helpTip = "Will reset all the not locked, chord line art values"; 
+        ResetLineArtBtn.helpTip = "Will reset all the chord line art values that are not locked"; 
         ResetLineArtBtn.text = "Reset Line Art"; 
         ResetLineArtBtn.preferredSize.width = 109; 
         ResetLineArtBtn.preferredSize.height = 24;
 
         ResetLineArtBtn.onClick = function()
         {
-            if(!PositioningLockCheckBox.value)
+            if(PositioningLockCheckBox.value && RepositioningLockCheckBox.value && DiagramSizeLockCheckBox.value &&  LineArtThicknessLockCheckBox.value)
             {
-                setDefaultAt(PrefID.x);
-                PositioningXInput.text = prefs.x;
-
-                setDefaultAt(PrefID.y);
-                PositioningYInput.text = prefs.y;
+                if(!prefs.unlockByDefault) showLockWarningDialog();
             }
-
-            if(!RepositioningLockCheckBox.value)
+            else
             {
-                setDefaultAt(PrefID.canRepositionX);
-                ReposXCheckBox.value = prefs.canRepositionX;
-                
-                setDefaultAt(PrefID.canRepositionY);
-                ReposYCheckBox.value = prefs.canRepositionY;
+                if(!PositioningLockCheckBox.value)
+                {
+                    setDefaultAt(PrefID.x);
+                    PositioningXInput.text = prefs.x;
 
-                setDefaultAt(PrefID.rePosSpacing);
-                ReposSpacingInput.text = prefs.rePosSpacing;
-            }
+                    setDefaultAt(PrefID.y);
+                    PositioningYInput.text = prefs.y;
+                }
 
-            if(!DiagramSizeLockCheckBox.value)
-            {
-                setDefaultAt(PrefID.width);
-                DiagramWidthInput.text = prefs.width;
+                if(!RepositioningLockCheckBox.value)
+                {
+                    setDefaultAt(PrefID.canRepositionX);
+                    ReposXCheckBox.value = prefs.canRepositionX;
+                    
+                    setDefaultAt(PrefID.canRepositionY);
+                    ReposYCheckBox.value = prefs.canRepositionY;
 
-                setDefaultAt(PrefID.isLinkWidthToHeight);
-                LinkWidthToHeightCheckBox.value = prefs.isLinkWidthToHeight;
+                    setDefaultAt(PrefID.rePosSpacing);
+                    ReposSpacingInput.text = prefs.rePosSpacing;
+                }
 
-                setDefaultAt(PrefID.height);
-                DiagramHeightInput.text = prefs.height;
+                if(!DiagramSizeLockCheckBox.value)
+                {
+                    setDefaultAt(PrefID.width);
+                    DiagramWidthInput.text = prefs.width;
 
-                setDefaultAt(PrefID.isLinkHeightToFrets);
-                LinkHeightToFretsCheckBox.value = prefs.isLinkHeightToFrets;
-            }
+                    setDefaultAt(PrefID.isLinkWidthToHeight);
+                    LinkWidthToHeightCheckBox.value = prefs.isLinkWidthToHeight;
 
-            if(!LineArtThicknessLockCheckBox.value)
-            {
-                setDefaultAt(PrefID.stringThickness);
-                LineArtThicknessStringsInput.text = prefs.stringThickness;
+                    setDefaultAt(PrefID.height);
+                    DiagramHeightInput.text = prefs.height;
 
-                setDefaultAt(PrefID.isLinkThickness);
-                LinkStringToFretsThicknessCheckBox.value = prefs.isLinkThickness;
+                    setDefaultAt(PrefID.isLinkHeightToFrets);
+                    LinkHeightToFretsCheckBox.value = prefs.isLinkHeightToFrets;
+                }
 
-                setDefaultAt(PrefID.fretThickness);
-                LineArtThicknessFretsInput.text = prefs.fretThickness;
+                if(!LineArtThicknessLockCheckBox.value)
+                {
+                    setDefaultAt(PrefID.stringThickness);
+                    LineArtThicknessStringsInput.text = prefs.stringThickness;
 
-                setDefaultAt(PrefID.nutThickness);
-                LineArtThicknessNutInput.text = prefs.nutThickness;
+                    setDefaultAt(PrefID.isLinkThickness);
+                    LinkStringToFretsThicknessCheckBox.value = prefs.isLinkThickness;
+
+                    setDefaultAt(PrefID.fretThickness);
+                    LineArtThicknessFretsInput.text = prefs.fretThickness;
+
+                    setDefaultAt(PrefID.nutThickness);
+                    LineArtThicknessNutInput.text = prefs.nutThickness;
+                }
             }
 
             try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
@@ -1447,10 +1482,159 @@ var lastLineArtThicknessNutInput = LineArtThicknessNutInput.text;
     return MainWindow;
 }
 
+// Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 150	 Text: QuitWarning
 
+//   .oooooo.                   o8o      .   oooooo   oooooo     oooo                                 o8o                         
+//  d8P'  `Y8b                  `"'    .o8    `888.    `888.     .8'                                  `"'                         
+// 888      888    oooo  oooo  oooo  .o888oo   `888.   .8888.   .8'    .oooo.   oooo d8b ooo. .oo.   oooo  ooo. .oo.    .oooooooo 
+// 888      888    `888  `888  `888    888      `888  .8'`888. .8'    `P  )88b  `888""8P `888P"Y88b  `888  `888P"Y88b  888' `88b  
+// 888      888     888   888   888    888       `888.8'  `888.8'      .oP"888   888      888   888   888   888   888  888   888  
+// `88b    d88b     888   888   888    888 .      `888'    `888'      d8(  888   888      888   888   888   888   888  `88bod8P'  
+//  `Y8bood8P'Ybd'  `V88V"V8P' o888o   "888"       `8'      `8'       `Y888""8o d888b    o888o o888o o888o o888o o888o `8oooooo.  
+//                                                                                                                     d"     YD  
+//                                                                                                                     "Y88888P'  
 
-// Helper functions
-//=================
+function showQuitWarningDialog()
+{
+    // QUITWARNINGDIALOG
+    // =================
+    var QuitWarningDialog = new Window("dialog"); 
+        QuitWarningDialog.text = "Attension Required!"; 
+        QuitWarningDialog.preferredSize.width = 440; 
+        QuitWarningDialog.preferredSize.height = 126; 
+        QuitWarningDialog.orientation = "column"; 
+        QuitWarningDialog.alignChildren = ["center","center"]; 
+        QuitWarningDialog.spacing = 10; 
+        QuitWarningDialog.margins = 16; 
+
+    var QuitWarningMessage = QuitWarningDialog.add("statictext", undefined, undefined, {name: "QuitWarningMessage"}); 
+        QuitWarningMessage.text = "The Chord Diagram Creator is about to quit!"; 
+        QuitWarningMessage.preferredSize.width = 408; 
+        QuitWarningMessage.preferredSize.height = 34; 
+        QuitWarningMessage.justify = "center"; 
+
+    var QuitByDefault = QuitWarningDialog.add("checkbox", undefined, undefined, {name: "QuitByDefault"}); 
+        QuitByDefault.helpTip = " Will set 'Yes' as default answer"; 
+        QuitByDefault.text = "Do not ask me again"; 
+        QuitByDefault.preferredSize.width = 314; 
+        QuitByDefault.preferredSize.height = 15; 
+        QuitByDefault.value = prefs.quitByDefault;
+
+        QuitByDefault.onClick = function()
+        {
+            prefs.quitByDefault = QuitByDefault.value;
+
+            try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
+        }
+
+    var QuitWarningEmpty = QuitWarningDialog.add("statictext", undefined, undefined, {name: "QuitWarningEmpty"}); // placeholder
+
+    // QUITWARNINGBUTTONSGROUP
+    // =======================
+    var QuitWarningButtonsGroup = QuitWarningDialog.add("group", undefined, {name: "QuitWarningButtonsGroup"}); 
+        QuitWarningButtonsGroup.orientation = "row"; 
+        QuitWarningButtonsGroup.alignChildren = ["center","center"]; 
+        QuitWarningButtonsGroup.spacing = 63; 
+        QuitWarningButtonsGroup.margins = 0; 
+
+    var QuitWarningYes = QuitWarningButtonsGroup.add("button", undefined, undefined, {name: "QuitWarningYes"}); 
+        QuitWarningYes.helpTip = "Will quit"; 
+        QuitWarningYes.text = "QUIT"; 
+        QuitWarningYes.preferredSize.width = 80; 
+        QuitWarningYes.preferredSize.height = 25; 
+
+            QuitWarningYes.onClick = function()
+            {
+                QuitWarningDialog.close();
+                mainWindow.close();
+                try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
+            }
+
+    var QuitWarningNo = QuitWarningButtonsGroup.add("button", undefined, undefined, {name: "QuitWarningNo"}); 
+        QuitWarningNo.helpTip = "Will not quit"; 
+        QuitWarningNo.text = "Cancel"; 
+        QuitWarningNo.preferredSize.width = 80; 
+        QuitWarningNo.preferredSize.height = 25; 
+
+            QuitWarningNo.onClick = function()
+            {
+                QuitWarningDialog.close();
+
+                try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
+            }
+
+    QuitWarningDialog.show();
+}
+
+// Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 150	 Text: LockWarning
+
+// ooooo                            oooo        oooooo   oooooo     oooo                                 o8o                         
+// `888'                            `888         `888.    `888.     .8'                                  `"'                         
+//  888          .ooooo.   .ooooo.   888  oooo    `888.   .8888.   .8'    .oooo.   oooo d8b ooo. .oo.   oooo  ooo. .oo.    .oooooooo 
+//  888         d88' `88b d88' `"Y8  888 .8P'      `888  .8'`888. .8'    `P  )88b  `888""8P `888P"Y88b  `888  `888P"Y88b  888' `88b  
+//  888         888   888 888        888888.        `888.8'  `888.8'      .oP"888   888      888   888   888   888   888  888   888  
+//  888       o 888   888 888   .o8  888 `88b.       `888'    `888'      d8(  888   888      888   888   888   888   888  `88bod8P'  
+// o888ooooood8 `Y8bod8P' `Y8bod8P' o888o o888o       `8'      `8'       `Y888""8o d888b    o888o o888o o888o o888o o888o `8oooooo.  
+//                                                                                                                        d"     YD 
+
+function showLockWarningDialog()
+{
+        // LOCKWARNINGDIALOG
+    // =================
+    var LockWarningDialog = new Window("dialog"); 
+        LockWarningDialog.text = "Attension Required!"; 
+        LockWarningDialog.orientation = "column"; 
+        LockWarningDialog.alignChildren = ["center","center"]; 
+        LockWarningDialog.spacing = 10; 
+        LockWarningDialog.margins = 16; 
+
+    var LockWarningMessage = LockWarningDialog.add("group"); 
+        LockWarningMessage.orientation = "column"; 
+        LockWarningMessage.alignChildren = ["left","center"]; 
+        LockWarningMessage.spacing = 0; 
+
+        LockWarningMessage.add("statictext", undefined, "The operation cannot complete, because  all related fields", {name: "LockWarningMessage"}); 
+        LockWarningMessage.add("statictext", undefined, "are locked. Unlock at least one related field and try again.  ", {name: "LockWarningMessage"}); 
+        LockWarningMessage.add("statictext", undefined, "", {name: "LockWarningMessage"}); 
+
+    var UnlockByDefault = LockWarningDialog.add("checkbox", undefined, undefined, {name: "UnlockByDefault"}); 
+        UnlockByDefault.helpTip = "Will affect both [New Chord] and [Reset Line Art] buttons"; 
+        UnlockByDefault.text = "Do not ask me again"; 
+        UnlockByDefault.value = prefs.unlockByDefault;
+        
+        UnlockByDefault.onClick = function()
+        {
+            prefs.unlockByDefault = UnlockByDefault.value;
+
+            try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
+        }
+
+    // LOCK WARNING BUTTON
+    // =======================
+    var LockWarningYesBtn = LockWarningDialog.add("button", undefined, undefined, {name: "LockWarningYes"});  
+        LockWarningYesBtn.text = "OK"; 
+        LockWarningYesBtn.preferredSize.width = 70; 
+        LockWarningYesBtn.preferredSize.height = 25; 
+
+            LockWarningYesBtn.onClick = function()
+            {
+                LockWarningDialog.close();
+            }
+
+    LockWarningDialog.show();
+}
+
+// Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 150	 Text: Helpers
+
+// ooooo   ooooo           oooo                                         
+// `888'   `888'           `888                                         
+//  888     888   .ooooo.   888  oo.ooooo.   .ooooo.  oooo d8b  .oooo.o 
+//  888ooooo888  d88' `88b  888   888' `88b d88' `88b `888""8P d88(  "8 
+//  888     888  888ooo888  888   888   888 888ooo888  888     `"Y88b.  
+//  888     888  888    .o  888   888   888 888    .o  888     o.  )88b 
+// o888o   o888o `Y8bod8P' o888o  888bod8P' `Y8bod8P' d888b    8""888P' 
+//                                888                                   
+//                               o888o                                  
 
 /** Sends a function with its arguments to be executed on Illustrator via BridgeTalk
  * 
@@ -1594,7 +1778,7 @@ function setDefaultAt(index)
             return true;
             break;              
         case PrefID.isNumberOfStringsAndFretsLock: 
-            prefs.isNumberOfStringsAndFretsLock = true;
+            prefs.isNumberOfStringsAndFretsLock = false;
             return true;
             break;              
         case PrefID.showMore: 
@@ -1667,6 +1851,14 @@ function setDefaultAt(index)
             break;
         case PrefID.lineArtThicknessLock:
             prefs.lineArtThicknessLock = false;
+            return true;
+            break;
+        case PrefID.quitByDefault:
+            prefs.quitByDefault = false;
+            return true;
+            break;
+        case PrefID.unlockByDefault:
+            prefs.unlockByDefault = false;
             return true;
             break;
         
