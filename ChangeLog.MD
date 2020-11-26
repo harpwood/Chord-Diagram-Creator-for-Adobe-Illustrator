@@ -3,6 +3,12 @@
 ```
 
 ```
+## [0.2.3] 
+### Added
+- Options dialog
+- ChordNameFontDropDown fonts population
+- ChordNameFontSizeInput, ChordNameFontHInput and ChordNameFontVInput implementation
+
 ## [0.1.9] 
 ### Added
 - quit confirmation dialog box

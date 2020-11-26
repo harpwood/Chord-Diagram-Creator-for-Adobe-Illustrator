@@ -3,12 +3,49 @@
 
 
 // Constants
-PrefID = {version:0,chordNameLock:1,numberOfStringsSelection:2,numberOfFretsSelection:3,drawBarre:4,fingersUsedLock:5,fretPositionsLock:6,isNumberOfStringsAndFretsLock:7,showMore:8,x:9,y:10,positioningLock:11,canRepositionX:12,canRepositionY:13,rePosSpacing:14,repositioningLock:15,width:16,isLinkWidthToHeight:17,height:18,isLinkHeightToFrets:19,diagramSizeLock:20,stringThickness:21,isLinkThickness:22,fretThickness:23,nutThickness:24,lineArtThicknessLock:25,quitByDefault:26,unlockByDefault:27,size:28};
-DEBUG                               = false;
+
+PrefID = {
+    version:0,
+    chordNameLock:1,
+    numberOfStringsSelection:2,
+    numberOfFretsSelection:3,
+    drawBarre:4,
+    fingersUsedLock:5,
+    fretPositionsLock:6,
+    isNumberOfStringsAndFretsLock:7,
+    showMore:8,
+    x:9,
+    y:10,
+    positioningLock:11,
+    canRepositionX:12,
+    canRepositionY:13,
+    rePosSpacing:14,
+    repositioningLock:15,
+    width:16,
+    isLinkWidthToHeight:17,
+    height:18,
+    isLinkHeightToFrets:19,
+    diagramSizeLock:20,
+    stringThickness:21,
+    isLinkThickness:22,
+    fretThickness:23,
+    nutThickness:24,
+    lineArtThicknessLock:25,
+    quitByDefault:26,
+    unlockByDefault:27,
+    chordNameFont:28,
+    chordNameFontSize:29,
+    chordNameFontH:30,
+    chordNameFontV:31,
+    
+    size:32
+};
+
+DEBUG                               = true;
 WINDOW_WIDTH                        = 500;
 WINDOW_HEIGHT_SMALL                 = 278;
 WINDOW_HEIGHT_BIG                   = 490;
-VERSION                             = "v0.1.9"
+VERSION                             = "v0.2.3"
 LINK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82";
 LOCK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0E%08%06%00%00%00%16%C2%A3%C2%8D%C2%AB%00%00%00%09pHYs%00%00%000%00%00%000%011Y'%C3%BA%00%00%00%C2%9BIDAT(%C2%91%7D%C2%90%C3%AB%0D%C3%820%0C%C2%84%C2%AF%C2%88%C3%9F%C2%A6%23u%C2%842I%C3%95%09%60%03%60%C2%82%C2%8E%00%1B%C3%90%11%60%12%C3%90-Pt%C3%88%C2%91%2C%2B%C3%8AIV%C2%AC%C3%8B%17%3F%02%C2%89dOr!%C2%B9%C2%A5%C2%B8%C3%80%C2%B5%C3%B7%C3%B3%04%60%040%03x%C2%B97%C3%88'%093%C2%9BKE%C2%BD%3E%23I%1E%C3%89%C2%8F%C3%9C%5D%C2%B8Z3%C3%A8%5E%C2%9F%C3%81%C2%A6%3A%C2%92O%C2%9F%C2%A7%C2%A5U%C3%A0%C2%96%C2%80%C2%87%C2%9Fc4s%C3%AB%C2%AB%C2%99%1D%15%C3%8A%5B%C3%A0%3B%C3%A4%C3%BF%25%C2%8Ar%C3%AB%2F%00U%13t%C2%8F%60%C3%B9%C3%B0X%C2%A5%C2%BAX%06%C2%A5C%0D%C2%ACm%5D%C2%95*j%C2%A6%C2%A9I%01%C2%B7%1F3%C3%AFG%02T%05%C3%AC%26%00%00%00%00IEND%C2%AEB%60%C2%82"; 
 ERROR_MSG                           = "Something went wrong: "; 
@@ -43,6 +80,18 @@ NUT_THICKNESS                       = "nutThickness";
 LINE_ART_THICKNESS_LOCK             = "lineArtThicknessLock";
 QUIT_BY_DEFAULT                     = "quitByDefault";
 UNLOCK_BY_DEFAULT                   = "unlockByDefault";
+
+CHORD_NAME_FONT                     = "chordNameFont";
+CHORD_NAME_FONT_SIZE                = "chordNameFontSize";
+CHORD_NAME_FONT_H                   = "chordNameFontH";
+CHORD_NAME_FONT_V                   = "chordNameFontV";
+
+FINGERS_USED_FONT                   = "FingersUsedFont";
+FRET_POSITION_LOCK                  = "FretPositionsFont";
+FRET_NUMBER_FONT                    = "FretNumberFont";
+
+DEFAULT_FONT                        = getDefaultFont();
+DEFAULT_NUMERIC_FONT                = ScriptUI.newFont("palette").name;
 
 init();
 
@@ -84,6 +133,10 @@ function loadPreferences()
         setDefaultAt(PrefID.lineArtThicknessLock);   
         setDefaultAt(PrefID.quitByDefault);   
         setDefaultAt(PrefID.unlockByDefault);   
+        setDefaultAt(PrefID.chordNameFont);   
+        setDefaultAt(PrefID.chordNameFontSize);   
+        setDefaultAt(PrefID.chordNameFontH);   
+        setDefaultAt(PrefID.chordNameFontV);   
     }
     else
     {
@@ -221,6 +274,22 @@ function loadPreferences()
                 case UNLOCK_BY_DEFAULT:
                     prefs.unlockByDefault = (data[i] == undefined) ? setDefaultAt(PrefID.unlockByDefault) : data[i];
                     checkData[PrefID.unlockByDefault] = true;
+                    break; 
+                case CHORD_NAME_FONT:
+                    prefs.chordNameFont = (data[i] == undefined) ? setDefaultAt(PrefID.chordNameFont) : data[i];
+                    checkData[PrefID.chordNameFont] = true;
+                    break; 
+                case CHORD_NAME_FONT_SIZE:
+                    prefs.chordNameFontSize = (data[i] == undefined) ? setDefaultAt(PrefID.chordNameFontSize) : data[i];
+                    checkData[PrefID.chordNameFontSize] = true;
+                    break; 
+                case CHORD_NAME_FONT_H:
+                    prefs.chordNameFontH = (data[i] == undefined) ? setDefaultAt(PrefID.chordNameFontH) : data[i];
+                    checkData[PrefID.chordNameFontH] = true;
+                    break; 
+                case CHORD_NAME_FONT_V:
+                    prefs.chordNameFontV = (data[i] == undefined) ? setDefaultAt(PrefID.chordNameFontV) : data[i];
+                    checkData[PrefID.chordNameFontV] = true;
                     break; 
             }
         }
@@ -677,6 +746,8 @@ var lastChordNameInput = ChordNameInput.text;
                     }
                 }
                 try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
+
+                alert("OK!");
             } 
 
     var SaveChordBtn = MainButtonSubGroup.add("button", undefined, undefined, {name: "SaveChordBtn"}); 
@@ -694,16 +765,21 @@ var lastChordNameInput = ChordNameInput.text;
             }
 
     var OptionsBtn = MainButtonSubGroup.add("button", undefined, undefined, {name: "OptionsBtn"}); 
-        OptionsBtn.helpTip = "Will open an options dialog "; 
+        OptionsBtn.helpTip = "Will open an options dialog."; 
         OptionsBtn.text = "Options"; 
         OptionsBtn.preferredSize.width = 98; 
         OptionsBtn.preferredSize.height = 24;
 
             OptionsBtn.onClick = function () 
             {
-                alert("OK");
-
-                try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
+                
+                try{
+                   //btExecute('showOptionsDialog');
+                    showOptionsDialog();
+                }
+                    catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
+                
+                //try{btExecute('savePrefs');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}  // save prefs
             }
 
     var AboutBtn = MainButtonSubGroup.add("button", undefined, undefined, {name: "AboutBtn"}); 
@@ -1624,6 +1700,914 @@ function showLockWarningDialog()
     LockWarningDialog.show();
 }
 
+// Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 300	 Text: Options
+
+//   .oooooo.                  .    o8o                                 
+//  d8P'  `Y8b               .o8    `"'                                 
+// 888      888 oo.ooooo.  .o888oo oooo   .ooooo.  ooo. .oo.    .oooo.o 
+// 888      888  888' `88b   888   `888  d88' `88b `888P"Y88b  d88(  "8 
+// 888      888  888   888   888    888  888   888  888   888  `"Y88b.  
+// `88b    d88'  888   888   888 .  888  888   888  888   888  o.  )88b 
+//  `Y8bood8P'   888bod8P'   "888" o888o `Y8bod8P' o888o o888o 8""888P' 
+//               888                                                    
+//              o888o                                                   
+                                                                     
+function showOptionsDialog()
+{
+
+    // OPTIONSDIALOG
+    // =============
+    var OptionsDialog = new Window("palette", undefined, undefined, {closeButton: false, borderless: false}); 
+        OptionsDialog.text = "Options"; 
+        OptionsDialog.orientation = "row"; 
+        OptionsDialog.alignChildren = ["center","top"]; 
+        OptionsDialog.spacing = 10; 
+        OptionsDialog.margins = 17; 
+
+    // OPTIONSTABPANEL
+    // ===============
+    var OptionsTabPanel = OptionsDialog.add("tabbedpanel", undefined, undefined, {name: "OptionsTabPanel"}); 
+        OptionsTabPanel.alignChildren = "fill"; 
+        OptionsTabPanel.preferredSize.width = 323.75; 
+        OptionsTabPanel.margins = 0; 
+
+    // OPTIONSFONTSTAB
+    // ===============
+    var OptionsFontsTab = OptionsTabPanel.add("tab", undefined, undefined, {name: "OptionsFontsTab"}); 
+        OptionsFontsTab.text = "Fonts"; 
+        OptionsFontsTab.orientation = "column"; 
+        OptionsFontsTab.alignChildren = ["center","top"]; 
+        OptionsFontsTab.spacing = 10; 
+        OptionsFontsTab.margins = 10; 
+
+    // SETFONTSGROUP
+    // =============
+    var SetFontsGroup = OptionsFontsTab.add("group", undefined, {name: "SetFontsGroup"}); 
+        SetFontsGroup.orientation = "column"; 
+        SetFontsGroup.alignChildren = ["left","center"]; 
+        SetFontsGroup.spacing = 10; 
+        SetFontsGroup.margins = 0; 
+
+    // CHORDNAMEFONTGROUP
+    // ==================
+    var ChordNameFontGroup = SetFontsGroup.add("group", undefined, {name: "ChordNameFontGroup"}); 
+        ChordNameFontGroup.preferredSize.width = 289; 
+        ChordNameFontGroup.preferredSize.height = 120; 
+        ChordNameFontGroup.orientation = "column"; 
+        ChordNameFontGroup.alignChildren = ["left","center"]; 
+        ChordNameFontGroup.spacing = 10; 
+        ChordNameFontGroup.margins = 0; 
+
+    // CHORDNAMEFONTPANEL
+    // ==================
+    var ChordNameFontPanel = ChordNameFontGroup.add("panel", undefined, undefined, {name: "ChordNameFontPanel"}); 
+        ChordNameFontPanel.text = "Chord Name Font"; 
+        ChordNameFontPanel.preferredSize.width = 287; 
+        ChordNameFontPanel.preferredSize.height = 118; 
+        ChordNameFontPanel.orientation = "column"; 
+        ChordNameFontPanel.alignChildren = ["left","top"]; 
+        ChordNameFontPanel.spacing = 10; 
+        ChordNameFontPanel.margins = 10; 
+
+    var ChordNameFontDropDown = ChordNameFontPanel.add("dropdownlist", undefined, undefined, {name: "ChordNameFontDropDown"}); 
+        ChordNameFontDropDown.helpTip = "Choose the font for the chord's diagram title"; 
+        ChordNameFontDropDown.selection = 0; 
+        ChordNameFontDropDown.preferredSize.width = 265; 
+        ChordNameFontDropDown.preferredSize.height = 25; 
+
+    // CHORDNAMEFONTBOTTOMGROUP
+    // ========================
+    var ChordNameFontBottomGroup = ChordNameFontPanel.add("group", undefined, {name: "ChordNameFontBottomGroup"}); 
+        ChordNameFontBottomGroup.orientation = "row"; 
+        ChordNameFontBottomGroup.alignChildren = ["left","center"]; 
+        ChordNameFontBottomGroup.spacing = 10; 
+        ChordNameFontBottomGroup.margins = 0; 
+
+    // CHORDNAMEFONTSIZEPANEL
+    // ======================
+    var ChordNameFontSizePanel = ChordNameFontBottomGroup.add("panel", undefined, undefined, {name: "ChordNameFontSizePanel"}); 
+        ChordNameFontSizePanel.text = "Size"; 
+        ChordNameFontSizePanel.preferredSize.width = 75; 
+        ChordNameFontSizePanel.preferredSize.height = 53; 
+        ChordNameFontSizePanel.orientation = "column"; 
+        ChordNameFontSizePanel.alignChildren = ["left","top"]; 
+        ChordNameFontSizePanel.spacing = 10; 
+        ChordNameFontSizePanel.margins = 10; 
+
+    var ChordNameFontSizeInput = ChordNameFontSizePanel.add('edittext {properties: {name: "ChordNameFontSizeInput"}}'); 
+        ChordNameFontSizeInput.helpTip = "Set the font size"; 
+        ChordNameFontSizeInput.text = prefs.chordNameFontSize; 
+        ChordNameFontSizeInput.preferredSize.width = 45; 
+        ChordNameFontSizeInput.alignment = ["center","top"]; 
+
+    // CHORDNAMEFONTOFFSETPANEL
+    // ========================
+    var ChordNameFontOffsetPanel = ChordNameFontBottomGroup.add("panel", undefined, undefined, {name: "ChordNameFontOffsetPanel"}); 
+        ChordNameFontOffsetPanel.text = "Offset"; 
+        ChordNameFontOffsetPanel.preferredSize.width = 179; 
+        ChordNameFontOffsetPanel.orientation = "row"; 
+        ChordNameFontOffsetPanel.alignChildren = ["left","center"]; 
+        ChordNameFontOffsetPanel.spacing = 17; 
+        ChordNameFontOffsetPanel.margins = 10; 
+
+    // CHORDNAMEFONTOFFSETHGROUP
+    // =========================
+    var ChordNameFontOffsetHGroup = ChordNameFontOffsetPanel.add("group", undefined, {name: "ChordNameFontOffsetHGroup"}); 
+        ChordNameFontOffsetHGroup.orientation = "row"; 
+        ChordNameFontOffsetHGroup.alignChildren = ["left","center"]; 
+        ChordNameFontOffsetHGroup.spacing = 4; 
+        ChordNameFontOffsetHGroup.margins = 0; 
+
+    var ChordNameFontOffsetH = ChordNameFontOffsetHGroup.add("statictext", undefined, undefined, {name: "ChordNameFontOffsetH"}); 
+        ChordNameFontOffsetH.text = "H:"; 
+
+    var ChordNameFontHInput = ChordNameFontOffsetHGroup.add('edittext {properties: {name: "ChordNameFontHInput"}}'); 
+        ChordNameFontHInput.helpTip = "Fine tune the position horizontally "; 
+        ChordNameFontHInput.text = prefs.chordNameFontH; 
+        ChordNameFontHInput.preferredSize.width = 42; 
+
+    // CHORDNAMEFONTOFFSETVGROUP
+    // =========================
+    var ChordNameFontOffsetVGroup = ChordNameFontOffsetPanel.add("group", undefined, {name: "ChordNameFontOffsetVGroup"}); 
+        ChordNameFontOffsetVGroup.orientation = "row"; 
+        ChordNameFontOffsetVGroup.alignChildren = ["left","center"]; 
+        ChordNameFontOffsetVGroup.spacing = 4; 
+        ChordNameFontOffsetVGroup.margins = 0; 
+
+    var ChordNameFontOffsetV = ChordNameFontOffsetVGroup.add("statictext", undefined, undefined, {name: "ChordNameFontOffsetV"}); 
+        ChordNameFontOffsetV.text = "V:"; 
+
+    var ChordNameFontVInput = ChordNameFontOffsetVGroup.add('edittext {properties: {name: "ChordNameFontVInput"}}'); 
+        ChordNameFontVInput.helpTip = "Fine Tune the position vertically "; 
+        ChordNameFontVInput.text = prefs.chordNameFontV; 
+        ChordNameFontVInput.preferredSize.width = 42; 
+
+
+    // FINGERSUSEDFONTGROUP
+    // ====================
+    var FingersUsedFontGroup = SetFontsGroup.add("group", undefined, {name: "FingersUsedFontGroup"}); 
+        FingersUsedFontGroup.preferredSize.width = 289; 
+        FingersUsedFontGroup.preferredSize.height = 120; 
+        FingersUsedFontGroup.orientation = "column"; 
+        FingersUsedFontGroup.alignChildren = ["left","center"]; 
+        FingersUsedFontGroup.spacing = 10; 
+        FingersUsedFontGroup.margins = 0; 
+
+    // FINGERSUSEDFONTPANEL
+    // ====================
+    var FingersUsedFontPanel = FingersUsedFontGroup.add("panel", undefined, undefined, {name: "FingersUsedFontPanel"}); 
+        FingersUsedFontPanel.text = "Fingers Used Font"; 
+        FingersUsedFontPanel.preferredSize.width = 287; 
+        FingersUsedFontPanel.preferredSize.height = 118; 
+        FingersUsedFontPanel.orientation = "column"; 
+        FingersUsedFontPanel.alignChildren = ["left","top"]; 
+        FingersUsedFontPanel.spacing = 10; 
+        FingersUsedFontPanel.margins = 10; 
+
+    var FingersUsedFontDropDown = FingersUsedFontPanel.add("dropdownlist", undefined, undefined, {name: "FingersUsedFontDropDown"}); 
+        FingersUsedFontDropDown.helpTip = "Choose the font for the chord's diagram title"; 
+        FingersUsedFontDropDown.selection = 0; 
+        FingersUsedFontDropDown.preferredSize.width = 265; 
+        FingersUsedFontDropDown.preferredSize.height = 25; 
+
+    // FINGERSUSEDFONTBOTTOMGROUP
+    // ==========================
+    var FingersUsedFontBottomGroup = FingersUsedFontPanel.add("group", undefined, {name: "FingersUsedFontBottomGroup"}); 
+        FingersUsedFontBottomGroup.orientation = "row"; 
+        FingersUsedFontBottomGroup.alignChildren = ["left","center"]; 
+        FingersUsedFontBottomGroup.spacing = 10; 
+        FingersUsedFontBottomGroup.margins = 0; 
+
+    // FINGERSUSEDFONTSIZEPANEL
+    // ========================
+    var FingersUsedFontSizePanel = FingersUsedFontBottomGroup.add("panel", undefined, undefined, {name: "FingersUsedFontSizePanel"}); 
+        FingersUsedFontSizePanel.text = "Size"; 
+        FingersUsedFontSizePanel.preferredSize.width = 75; 
+        FingersUsedFontSizePanel.preferredSize.height = 53; 
+        FingersUsedFontSizePanel.orientation = "column"; 
+        FingersUsedFontSizePanel.alignChildren = ["left","top"]; 
+        FingersUsedFontSizePanel.spacing = 10; 
+        FingersUsedFontSizePanel.margins = 10; 
+
+    var FingersUsedFontSizeInput = FingersUsedFontSizePanel.add('edittext {properties: {name: "FingersUsedFontSizeInput"}}'); 
+        FingersUsedFontSizeInput.helpTip = "Set the font size"; 
+        FingersUsedFontSizeInput.text = "auto"; 
+        FingersUsedFontSizeInput.preferredSize.width = 45; 
+        FingersUsedFontSizeInput.alignment = ["center","top"]; 
+
+    // FINGERSUSEDFONTOFFSETPANEL
+    // ==========================
+    var FingersUsedFontOffsetPanel = FingersUsedFontBottomGroup.add("panel", undefined, undefined, {name: "FingersUsedFontOffsetPanel"}); 
+        FingersUsedFontOffsetPanel.text = "Offset"; 
+        FingersUsedFontOffsetPanel.preferredSize.width = 179; 
+        FingersUsedFontOffsetPanel.orientation = "row"; 
+        FingersUsedFontOffsetPanel.alignChildren = ["left","center"]; 
+        FingersUsedFontOffsetPanel.spacing = 17; 
+        FingersUsedFontOffsetPanel.margins = 10; 
+
+    // FINGERSUSEDFONTOFFSETHGROUP
+    // ===========================
+    var FingersUsedFontOffsetHGroup = FingersUsedFontOffsetPanel.add("group", undefined, {name: "FingersUsedFontOffsetHGroup"}); 
+        FingersUsedFontOffsetHGroup.orientation = "row"; 
+        FingersUsedFontOffsetHGroup.alignChildren = ["left","center"]; 
+        FingersUsedFontOffsetHGroup.spacing = 4; 
+        FingersUsedFontOffsetHGroup.margins = 0; 
+
+    var FingersUsedFontOffsetH = FingersUsedFontOffsetHGroup.add("statictext", undefined, undefined, {name: "FingersUsedFontOffsetH"}); 
+        FingersUsedFontOffsetH.text = "H:"; 
+
+    var FingersUsedFontHInput = FingersUsedFontOffsetHGroup.add('edittext {properties: {name: "FingersUsedFontHInput"}}'); 
+        FingersUsedFontHInput.helpTip = "Fine tune the position horizontally "; 
+        FingersUsedFontHInput.text = "0"; 
+        FingersUsedFontHInput.preferredSize.width = 42; 
+
+    // FINGERSUSEDFONTOFFSETVGROUP
+    // ===========================
+    var FingersUsedFontOffsetVGroup = FingersUsedFontOffsetPanel.add("group", undefined, {name: "FingersUsedFontOffsetVGroup"}); 
+        FingersUsedFontOffsetVGroup.orientation = "row"; 
+        FingersUsedFontOffsetVGroup.alignChildren = ["left","center"]; 
+        FingersUsedFontOffsetVGroup.spacing = 4; 
+        FingersUsedFontOffsetVGroup.margins = 0; 
+
+    var FingersUsedFontOffsetV = FingersUsedFontOffsetVGroup.add("statictext", undefined, undefined, {name: "FingersUsedFontOffsetV"}); 
+        FingersUsedFontOffsetV.text = "V:"; 
+
+    var FingersUsedFontVInput = FingersUsedFontOffsetVGroup.add('edittext {properties: {name: "FingersUsedFontVInput"}}'); 
+        FingersUsedFontVInput.helpTip = "Fine Tune the position vertically "; 
+        FingersUsedFontVInput.text = "0"; 
+        FingersUsedFontVInput.preferredSize.width = 42; 
+
+    // FRETPOSITIONSFONTGROUP
+    // ======================
+    var FretPositionsFontGroup = SetFontsGroup.add("group", undefined, {name: "FretPositionsFontGroup"}); 
+        FretPositionsFontGroup.preferredSize.width = 289; 
+        FretPositionsFontGroup.preferredSize.height = 120; 
+        FretPositionsFontGroup.orientation = "column"; 
+        FretPositionsFontGroup.alignChildren = ["left","center"]; 
+        FretPositionsFontGroup.spacing = 10; 
+        FretPositionsFontGroup.margins = 0; 
+
+    // FRETPOSITIONSFONTPANEL
+    // ======================
+    var FretPositionsFontPanel = FretPositionsFontGroup.add("panel", undefined, undefined, {name: "FretPositionsFontPanel"}); 
+        FretPositionsFontPanel.text = "Fret Positions Font"; 
+        FretPositionsFontPanel.preferredSize.width = 287; 
+        FretPositionsFontPanel.preferredSize.height = 118; 
+        FretPositionsFontPanel.orientation = "column"; 
+        FretPositionsFontPanel.alignChildren = ["left","top"]; 
+        FretPositionsFontPanel.spacing = 10; 
+        FretPositionsFontPanel.margins = 10; 
+
+    var FretPositionsFontDropDown = FretPositionsFontPanel.add("dropdownlist", undefined, undefined, {name: "FretPositionsFontDropDown"}); 
+        FretPositionsFontDropDown.helpTip = "Choose the font for the chord's diagram title"; 
+        FretPositionsFontDropDown.selection = 0; 
+        FretPositionsFontDropDown.preferredSize.width = 265; 
+        FretPositionsFontDropDown.preferredSize.height = 25; 
+
+    // FRETPOSITIONSFONTBOTTOMGROUP
+    // ============================
+    var FretPositionsFontBottomGroup = FretPositionsFontPanel.add("group", undefined, {name: "FretPositionsFontBottomGroup"}); 
+        FretPositionsFontBottomGroup.orientation = "row"; 
+        FretPositionsFontBottomGroup.alignChildren = ["left","center"]; 
+        FretPositionsFontBottomGroup.spacing = 10; 
+        FretPositionsFontBottomGroup.margins = 0; 
+
+    // FRETPOSITIONSFONTSIZEPANEL
+    // ==========================
+    var FretPositionsFontSizePanel = FretPositionsFontBottomGroup.add("panel", undefined, undefined, {name: "FretPositionsFontSizePanel"}); 
+        FretPositionsFontSizePanel.text = "Size"; 
+        FretPositionsFontSizePanel.preferredSize.width = 75; 
+        FretPositionsFontSizePanel.preferredSize.height = 53; 
+        FretPositionsFontSizePanel.orientation = "column"; 
+        FretPositionsFontSizePanel.alignChildren = ["left","top"]; 
+        FretPositionsFontSizePanel.spacing = 10; 
+        FretPositionsFontSizePanel.margins = 10; 
+
+    var FretPositionsFontSizeInput = FretPositionsFontSizePanel.add('edittext {properties: {name: "FretPositionsFontSizeInput"}}'); 
+        FretPositionsFontSizeInput.helpTip = "Set the font size"; 
+        FretPositionsFontSizeInput.text = "auto"; 
+        FretPositionsFontSizeInput.preferredSize.width = 45; 
+        FretPositionsFontSizeInput.alignment = ["center","top"]; 
+
+    // FRETPOSITIONSFONTOFFSETPANEL
+    // ============================
+    var FretPositionsFontOffsetPanel = FretPositionsFontBottomGroup.add("panel", undefined, undefined, {name: "FretPositionsFontOffsetPanel"}); 
+        FretPositionsFontOffsetPanel.text = "Offset"; 
+        FretPositionsFontOffsetPanel.preferredSize.width = 179; 
+        FretPositionsFontOffsetPanel.orientation = "row"; 
+        FretPositionsFontOffsetPanel.alignChildren = ["left","center"]; 
+        FretPositionsFontOffsetPanel.spacing = 17; 
+        FretPositionsFontOffsetPanel.margins = 10; 
+
+    // FRETPOSITIONSFONTOFFSETHGROUP
+    // =============================
+    var FretPositionsFontOffsetHGroup = FretPositionsFontOffsetPanel.add("group", undefined, {name: "FretPositionsFontOffsetHGroup"}); 
+        FretPositionsFontOffsetHGroup.orientation = "row"; 
+        FretPositionsFontOffsetHGroup.alignChildren = ["left","center"]; 
+        FretPositionsFontOffsetHGroup.spacing = 4; 
+        FretPositionsFontOffsetHGroup.margins = 0; 
+
+    var FretPositionsFontOffsetH = FretPositionsFontOffsetHGroup.add("statictext", undefined, undefined, {name: "FretPositionsFontOffsetH"}); 
+        FretPositionsFontOffsetH.text = "H:"; 
+
+    var FretPositionsFontHInput = FretPositionsFontOffsetHGroup.add('edittext {properties: {name: "FretPositionsFontHInput"}}'); 
+        FretPositionsFontHInput.helpTip = "Fine tune the position horizontally "; 
+        FretPositionsFontHInput.text = "0"; 
+        FretPositionsFontHInput.preferredSize.width = 42; 
+
+    // FRETPOSITIONSFONTOFFSETVGROUP
+    // =============================
+    var FretPositionsFontOffsetVGroup = FretPositionsFontOffsetPanel.add("group", undefined, {name: "FretPositionsFontOffsetVGroup"}); 
+        FretPositionsFontOffsetVGroup.orientation = "row"; 
+        FretPositionsFontOffsetVGroup.alignChildren = ["left","center"]; 
+        FretPositionsFontOffsetVGroup.spacing = 4; 
+        FretPositionsFontOffsetVGroup.margins = 0; 
+
+    var FretPositionsFontOffsetV = FretPositionsFontOffsetVGroup.add("statictext", undefined, undefined, {name: "FretPositionsFontOffsetV"}); 
+        FretPositionsFontOffsetV.text = "V:"; 
+
+    var FretPositionsFontVInput = FretPositionsFontOffsetVGroup.add('edittext {properties: {name: "FretPositionsFontVInput"}}'); 
+        FretPositionsFontVInput.helpTip = "Fine Tune the position vertically "; 
+        FretPositionsFontVInput.text = "0"; 
+        FretPositionsFontVInput.preferredSize.width = 42; 
+
+    // FRETNUMBERFONTGROUP
+    // ===================
+    var FretNumberFontGroup = SetFontsGroup.add("group", undefined, {name: "FretNumberFontGroup"}); 
+        FretNumberFontGroup.preferredSize.width = 289; 
+        FretNumberFontGroup.preferredSize.height = 120; 
+        FretNumberFontGroup.orientation = "column"; 
+        FretNumberFontGroup.alignChildren = ["left","center"]; 
+        FretNumberFontGroup.spacing = 10; 
+        FretNumberFontGroup.margins = 0; 
+
+    // FRETNUMBERFONTPANEL
+    // ===================
+    var FretNumberFontPanel = FretNumberFontGroup.add("panel", undefined, undefined, {name: "FretNumberFontPanel"}); 
+        FretNumberFontPanel.text = "Fret Number Font"; 
+        FretNumberFontPanel.preferredSize.width = 287; 
+        FretNumberFontPanel.preferredSize.height = 118; 
+        FretNumberFontPanel.orientation = "column"; 
+        FretNumberFontPanel.alignChildren = ["left","top"]; 
+        FretNumberFontPanel.spacing = 10; 
+        FretNumberFontPanel.margins = 10; 
+
+    var FretNumberFontDropDown = FretNumberFontPanel.add("dropdownlist", undefined, undefined, {name: "FretNumberFontDropDown"}); 
+        FretNumberFontDropDown.helpTip = "Choose the font for the chord's diagram title"; 
+        FretNumberFontDropDown.selection = 0; 
+        FretNumberFontDropDown.preferredSize.width = 265; 
+        FretNumberFontDropDown.preferredSize.height = 25; 
+
+    // FRETNUMBERFONTBOTTOMGROUP
+    // =========================
+    var FretNumberFontBottomGroup = FretNumberFontPanel.add("group", undefined, {name: "FretNumberFontBottomGroup"}); 
+        FretNumberFontBottomGroup.orientation = "row"; 
+        FretNumberFontBottomGroup.alignChildren = ["left","center"]; 
+        FretNumberFontBottomGroup.spacing = 10; 
+        FretNumberFontBottomGroup.margins = 0; 
+
+    // FRETNUMBERFONTSIZEPANEL
+    // =======================
+    var FretNumberFontSizePanel = FretNumberFontBottomGroup.add("panel", undefined, undefined, {name: "FretNumberFontSizePanel"}); 
+        FretNumberFontSizePanel.text = "Size"; 
+        FretNumberFontSizePanel.preferredSize.width = 75; 
+        FretNumberFontSizePanel.preferredSize.height = 53; 
+        FretNumberFontSizePanel.orientation = "column"; 
+        FretNumberFontSizePanel.alignChildren = ["left","top"]; 
+        FretNumberFontSizePanel.spacing = 10; 
+        FretNumberFontSizePanel.margins = 10; 
+
+    var FretNumberFontSizeInput = FretNumberFontSizePanel.add('edittext {properties: {name: "FretNumberFontSizeInput"}}'); 
+        FretNumberFontSizeInput.helpTip = "Set the font size"; 
+        FretNumberFontSizeInput.text = "auto"; 
+        FretNumberFontSizeInput.preferredSize.width = 45; 
+        FretNumberFontSizeInput.alignment = ["center","top"]; 
+
+    // FRETNUMBERFONTOFFSETPANEL
+    // =========================
+    var FretNumberFontOffsetPanel = FretNumberFontBottomGroup.add("panel", undefined, undefined, {name: "FretNumberFontOffsetPanel"}); 
+        FretNumberFontOffsetPanel.text = "Offset"; 
+        FretNumberFontOffsetPanel.preferredSize.width = 179; 
+        FretNumberFontOffsetPanel.orientation = "row"; 
+        FretNumberFontOffsetPanel.alignChildren = ["left","center"]; 
+        FretNumberFontOffsetPanel.spacing = 17; 
+        FretNumberFontOffsetPanel.margins = 10; 
+
+    // FRETNUMBERFONTOFFSETHGROUP
+    // ==========================
+    var FretNumberFontOffsetHGroup = FretNumberFontOffsetPanel.add("group", undefined, {name: "FretNumberFontOffsetHGroup"}); 
+        FretNumberFontOffsetHGroup.orientation = "row"; 
+        FretNumberFontOffsetHGroup.alignChildren = ["left","center"]; 
+        FretNumberFontOffsetHGroup.spacing = 4; 
+        FretNumberFontOffsetHGroup.margins = 0; 
+
+    var FretNumberFontOffsetH = FretNumberFontOffsetHGroup.add("statictext", undefined, undefined, {name: "FretNumberFontOffsetH"}); 
+        FretNumberFontOffsetH.text = "H:"; 
+
+    var FretNumberFontHInput = FretNumberFontOffsetHGroup.add('edittext {properties: {name: "FretNumberFontHInput"}}'); 
+        FretNumberFontHInput.helpTip = "Fine tune the position horizontally "; 
+        FretNumberFontHInput.text = "0"; 
+        FretNumberFontHInput.preferredSize.width = 42; 
+
+    // FRETNUMBERFONTOFFSETVGROUP
+    // ==========================
+    var FretNumberFontOffsetVGroup = FretNumberFontOffsetPanel.add("group", undefined, {name: "FretNumberFontOffsetVGroup"}); 
+        FretNumberFontOffsetVGroup.orientation = "row"; 
+        FretNumberFontOffsetVGroup.alignChildren = ["left","center"]; 
+        FretNumberFontOffsetVGroup.spacing = 4; 
+        FretNumberFontOffsetVGroup.margins = 0; 
+
+    var FretNumberFontOffsetV = FretNumberFontOffsetVGroup.add("statictext", undefined, undefined, {name: "FretNumberFontOffsetV"}); 
+        FretNumberFontOffsetV.text = "V:"; 
+
+    var FretNumberFontVInput = FretNumberFontOffsetVGroup.add('edittext {properties: {name: "FretNumberFontVInput"}}'); 
+        FretNumberFontVInput.helpTip = "Fine Tune the position vertically "; 
+        FretNumberFontVInput.text = "0"; 
+        FretNumberFontVInput.preferredSize.width = 42; 
+
+            //HERE
+          // populate dropdown menus with fonts
+            var iCount = textFonts.length;
+            var fontList = [];
+            
+            for (var i=0; i<iCount; i++) {
+                var sFontName = textFonts[i].name;
+                fontList.push(textFonts[i].name);
+                sFontName += " ";
+                sFontNames = sFontName + textFonts[i].style;
+                ChordNameFontDropDown.add("item", sFontName);
+                FingersUsedFontDropDown.add("item", sFontName);
+                FretPositionsFontDropDown.add("item", sFontName);
+                FretNumberFontDropDown.add("item", sFontName);
+            }
+  
+            ChordNameFontDropDown.selection = ChordNameFontDropDown.items[getIndexOf(fontList, prefs.chordNameFont)];
+            FingersUsedFontDropDown.selection = 0;
+            FretPositionsFontDropDown.selection = 0;
+            FretNumberFontDropDown.selection = 0;
+            
+            //fontListMenu.selection = fontListMenu.items[getIndexOf(fontList, prefs.chordFontLabel)];
+            //fontListMenuFrets.selection = fontListMenuFrets.items[getIndexOf(fontList, prefs.chordFont)];
+
+    // OPTIONSSETDEFAULTSTAB
+    // =====================
+    var OptionsSetDefaultsTab = OptionsTabPanel.add("tab", undefined, undefined, {name: "OptionsSetDefaultsTab"}); 
+        OptionsSetDefaultsTab.text = "Set Defaults"; 
+        OptionsSetDefaultsTab.orientation = "column"; 
+        OptionsSetDefaultsTab.alignChildren = ["center","top"]; 
+        OptionsSetDefaultsTab.spacing = 10; 
+        OptionsSetDefaultsTab.margins = 10; 
+
+    var FactoryResetButton = OptionsSetDefaultsTab.add("button", undefined, undefined, {name: "FactoryResetButton"}); 
+        FactoryResetButton.text = "Factory Reset"; 
+        FactoryResetButton.alignment = ["fill","top"]; 
+
+            FactoryResetButton.onClick = function()
+            {
+                alert("Factory Reset");
+            }
+
+    var SetDefaultsDivider = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsDivider"}); 
+        SetDefaultsDivider.alignment = "fill"; 
+
+    // SETDEFAULTSNUMBEROFSTRINGSANDFRETSPANEL
+    // =======================================
+    var SetDefaultsNumberOfStringsAndFretsPanel = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsNumberOfStringsAndFretsPanel"}); 
+        SetDefaultsNumberOfStringsAndFretsPanel.enabled = false; 
+        SetDefaultsNumberOfStringsAndFretsPanel.text = "Number of Strings and Frets"; 
+        SetDefaultsNumberOfStringsAndFretsPanel.orientation = "column"; 
+        SetDefaultsNumberOfStringsAndFretsPanel.alignChildren = ["left","top"]; 
+        SetDefaultsNumberOfStringsAndFretsPanel.spacing = 10; 
+        SetDefaultsNumberOfStringsAndFretsPanel.margins = 10; 
+
+    // SETDEFAULTSGROUP
+    // ================
+    var SetDefaultsGroup = SetDefaultsNumberOfStringsAndFretsPanel.add("group", undefined, {name: "SetDefaultsGroup"}); 
+        SetDefaultsGroup.preferredSize.width = 262; 
+        SetDefaultsGroup.preferredSize.height = 25; 
+        SetDefaultsGroup.orientation = "row"; 
+        SetDefaultsGroup.alignChildren = ["left","center"]; 
+        SetDefaultsGroup.spacing = 10; 
+        SetDefaultsGroup.margins = 0; 
+
+    var SetDefaultsStringsDropdown_array = ["6 Strings"]; 
+    var SetDefaultsStringsDropdown = SetDefaultsGroup.add("dropdownlist", undefined, undefined, {name: "SetDefaultsStringsDropdown", items: SetDefaultsStringsDropdown_array}); 
+        SetDefaultsStringsDropdown.selection = 0; 
+
+    var SetDefaultsFretsDropdown_array = ["5 Frets"]; 
+    var SetDefaultsFretsDropdown = SetDefaultsGroup.add("dropdownlist", undefined, undefined, {name: "SetDefaultsFretsDropdown", items: SetDefaultsFretsDropdown_array}); 
+        SetDefaultsFretsDropdown.selection = 0; 
+
+    var SetDefaultsDrawBarreCheckBox = SetDefaultsGroup.add("checkbox", undefined, undefined, {name: "SetDefaultsDrawBarreCheckBox"}); 
+        SetDefaultsDrawBarreCheckBox.text = "Draw Barre"; 
+
+    // SETDEFAULTSPOSITIONINGPANEL
+    // ===========================
+    var SetDefaultsPositioningPanel = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsPositioningPanel"}); 
+        SetDefaultsPositioningPanel.enabled = false; 
+        SetDefaultsPositioningPanel.text = "Positioning"; 
+        SetDefaultsPositioningPanel.preferredSize.width = 284; 
+        SetDefaultsPositioningPanel.preferredSize.height = 53; 
+        SetDefaultsPositioningPanel.orientation = "row"; 
+        SetDefaultsPositioningPanel.alignChildren = ["center","center"]; 
+        SetDefaultsPositioningPanel.spacing = 43; 
+        SetDefaultsPositioningPanel.margins = 10; 
+
+    // SETDEFAULTSPOSITIONINGXGROUP
+    // ============================
+    var SetDefaultsPositioningXGroup = SetDefaultsPositioningPanel.add("group", undefined, {name: "SetDefaultsPositioningXGroup"}); 
+        SetDefaultsPositioningXGroup.orientation = "row"; 
+        SetDefaultsPositioningXGroup.alignChildren = ["left","center"]; 
+        SetDefaultsPositioningXGroup.spacing = 10; 
+        SetDefaultsPositioningXGroup.margins = 0; 
+
+    var SetDefaultsPositioningX = SetDefaultsPositioningXGroup.add("statictext", undefined, undefined, {name: "SetDefaultsPositioningX"}); 
+        SetDefaultsPositioningX.text = "x :"; 
+
+    var SetDefaultsPositioningXInput = SetDefaultsPositioningXGroup.add('edittext {properties: {name: "SetDefaultsPositioningXInput"}}'); 
+        SetDefaultsPositioningXInput.text = "0"; 
+        SetDefaultsPositioningXInput.preferredSize.width = 50; 
+        SetDefaultsPositioningXInput.preferredSize.height = 23; 
+
+    // SETDEFAULTSPOSITIONINGYGROUP
+    // ============================
+    var SetDefaultsPositioningYGroup = SetDefaultsPositioningPanel.add("group", undefined, {name: "SetDefaultsPositioningYGroup"}); 
+        SetDefaultsPositioningYGroup.orientation = "row"; 
+        SetDefaultsPositioningYGroup.alignChildren = ["left","center"]; 
+        SetDefaultsPositioningYGroup.spacing = 10; 
+        SetDefaultsPositioningYGroup.margins = 0; 
+
+    var SetDefaultsPositioningY = SetDefaultsPositioningYGroup.add("statictext", undefined, undefined, {name: "SetDefaultsPositioningY"}); 
+        SetDefaultsPositioningY.text = "y :"; 
+
+    var SetDefaultsPositioningXInput1 = SetDefaultsPositioningYGroup.add('edittext {properties: {name: "SetDefaultsPositioningXInput1"}}'); 
+        SetDefaultsPositioningXInput1.text = "0"; 
+        SetDefaultsPositioningXInput1.preferredSize.width = 50; 
+
+    // SETDEFAULTSREPOSITIONINGPANEL
+    // =============================
+    var SetDefaultsRepositioningPanel = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsRepositioningPanel"}); 
+        SetDefaultsRepositioningPanel.enabled = false; 
+        SetDefaultsRepositioningPanel.text = "Repositioning"; 
+        SetDefaultsRepositioningPanel.preferredSize.width = 284; 
+        SetDefaultsRepositioningPanel.orientation = "row"; 
+        SetDefaultsRepositioningPanel.alignChildren = ["center","center"]; 
+        SetDefaultsRepositioningPanel.spacing = 35; 
+        SetDefaultsRepositioningPanel.margins = 10; 
+
+    var SetDefaultsRepositioningXCheckBox = SetDefaultsRepositioningPanel.add("checkbox", undefined, undefined, {name: "SetDefaultsRepositioningXCheckBox"}); 
+        SetDefaultsRepositioningXCheckBox.text = "x"; 
+
+    var SetDefaultsRepositioningYCheckBox = SetDefaultsRepositioningPanel.add("checkbox", undefined, undefined, {name: "SetDefaultsRepositioningYCheckBox"}); 
+        SetDefaultsRepositioningYCheckBox.text = "y"; 
+
+    // SETDEFAULTSREPOSITIONINGSPACINGGROUP
+    // ====================================
+    var SetDefaultsRepositioningSpacingGroup = SetDefaultsRepositioningPanel.add("group", undefined, {name: "SetDefaultsRepositioningSpacingGroup"}); 
+        SetDefaultsRepositioningSpacingGroup.orientation = "row"; 
+        SetDefaultsRepositioningSpacingGroup.alignChildren = ["left","center"]; 
+        SetDefaultsRepositioningSpacingGroup.spacing = 10; 
+        SetDefaultsRepositioningSpacingGroup.margins = 0; 
+
+    var SetDefaultsRepositioningSpacing = SetDefaultsRepositioningSpacingGroup.add("statictext", undefined, undefined, {name: "SetDefaultsRepositioningSpacing"}); 
+        SetDefaultsRepositioningSpacing.text = "Spacing"; 
+
+    var SetDefaultsRepositioningSpacingInput = SetDefaultsRepositioningSpacingGroup.add('edittext {properties: {name: "SetDefaultsRepositioningSpacingInput"}}'); 
+        SetDefaultsRepositioningSpacingInput.text = "auto"; 
+
+    // SETDEFAULTSDIAGRAMSIZEPANEL
+    // ===========================
+    var SetDefaultsDiagramSizePanel = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsDiagramSizePanel"}); 
+        SetDefaultsDiagramSizePanel.enabled = false; 
+        SetDefaultsDiagramSizePanel.text = "Diagram Size"; 
+        SetDefaultsDiagramSizePanel.preferredSize.width = 279; 
+        SetDefaultsDiagramSizePanel.preferredSize.height = 53; 
+        SetDefaultsDiagramSizePanel.orientation = "column"; 
+        SetDefaultsDiagramSizePanel.alignChildren = ["center","center"]; 
+        SetDefaultsDiagramSizePanel.spacing = 10; 
+        SetDefaultsDiagramSizePanel.margins = 10; 
+
+    // SETDEFAULTSDIAGRAMTOPGROUP
+    // ==========================
+    var SetDefaultsDiagramTopGroup = SetDefaultsDiagramSizePanel.add("group", undefined, {name: "SetDefaultsDiagramTopGroup"}); 
+        SetDefaultsDiagramTopGroup.orientation = "row"; 
+        SetDefaultsDiagramTopGroup.alignChildren = ["left","center"]; 
+        SetDefaultsDiagramTopGroup.spacing = 25; 
+        SetDefaultsDiagramTopGroup.margins = 0; 
+
+    // SETDEFAULTSDIAGRAMSIZEWIDTHGROUP
+    // ================================
+    var SetDefaultsDiagramSizeWidthGroup = SetDefaultsDiagramTopGroup.add("group", undefined, {name: "SetDefaultsDiagramSizeWidthGroup"}); 
+        SetDefaultsDiagramSizeWidthGroup.orientation = "row"; 
+        SetDefaultsDiagramSizeWidthGroup.alignChildren = ["left","center"]; 
+        SetDefaultsDiagramSizeWidthGroup.spacing = 10; 
+        SetDefaultsDiagramSizeWidthGroup.margins = 0; 
+
+    var SetDefaultsDiagramSizeWidth = SetDefaultsDiagramSizeWidthGroup.add("statictext", undefined, undefined, {name: "SetDefaultsDiagramSizeWidth"}); 
+        SetDefaultsDiagramSizeWidth.text = "Width:"; 
+
+    var SetDefaultsDiagramSizeWidthInput = SetDefaultsDiagramSizeWidthGroup.add('edittext {properties: {name: "SetDefaultsDiagramSizeWidthInput"}}'); 
+        SetDefaultsDiagramSizeWidthInput.text = "100"; 
+
+    // SETDEFAULTSLINKWIDTHTOHEIGHTGROUP
+    // =================================
+    var SetDefaultsLinkWidthToHeightGroup = SetDefaultsDiagramTopGroup.add("group", undefined, {name: "SetDefaultsLinkWidthToHeightGroup"}); 
+        SetDefaultsLinkWidthToHeightGroup.orientation = "row"; 
+        SetDefaultsLinkWidthToHeightGroup.alignChildren = ["left","center"]; 
+        SetDefaultsLinkWidthToHeightGroup.spacing = 0; 
+        SetDefaultsLinkWidthToHeightGroup.margins = 0; 
+
+    var SetDefaultsLinkWidthToHeightCheckBox = SetDefaultsLinkWidthToHeightGroup.add("checkbox", undefined, undefined, {name: "SetDefaultsLinkWidthToHeightCheckBox"}); 
+
+    var SetDefaultsLinkWidthToHeightImage_imgString = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82"; 
+    var SetDefaultsLinkWidthToHeightImage = SetDefaultsLinkWidthToHeightGroup.add("image", undefined, File.decode(SetDefaultsLinkWidthToHeightImage_imgString), {name: "SetDefaultsLinkWidthToHeightImage"}); 
+
+    // SETDEFAULTSDIAGRAMSIZEHEIGHTGROUP
+    // =================================
+    var SetDefaultsDiagramSizeHeightGroup = SetDefaultsDiagramTopGroup.add("group", undefined, {name: "SetDefaultsDiagramSizeHeightGroup"}); 
+        SetDefaultsDiagramSizeHeightGroup.orientation = "row"; 
+        SetDefaultsDiagramSizeHeightGroup.alignChildren = ["left","center"]; 
+        SetDefaultsDiagramSizeHeightGroup.spacing = 10; 
+        SetDefaultsDiagramSizeHeightGroup.margins = 0; 
+
+    var SetDefaultsDiagramSizeHeight = SetDefaultsDiagramSizeHeightGroup.add("statictext", undefined, undefined, {name: "SetDefaultsDiagramSizeHeight"}); 
+        SetDefaultsDiagramSizeHeight.text = "Height:"; 
+
+    var SetDefaultsDiagramSizeHeightInput = SetDefaultsDiagramSizeHeightGroup.add('edittext {properties: {name: "SetDefaultsDiagramSizeHeightInput"}}'); 
+        SetDefaultsDiagramSizeHeightInput.text = "100"; 
+
+    // SETDEFAULTSDIAGRAMBOTTOMGROUP
+    // =============================
+    var SetDefaultsDiagramBottomGroup = SetDefaultsDiagramSizePanel.add("group", undefined, {name: "SetDefaultsDiagramBottomGroup"}); 
+        SetDefaultsDiagramBottomGroup.orientation = "row"; 
+        SetDefaultsDiagramBottomGroup.alignChildren = ["left","center"]; 
+        SetDefaultsDiagramBottomGroup.spacing = 10; 
+        SetDefaultsDiagramBottomGroup.margins = 0; 
+
+    var SetDefaultsLinkHeightToFretsCheckBox = SetDefaultsDiagramBottomGroup.add("checkbox", undefined, undefined, {name: "SetDefaultsLinkHeightToFretsCheckBox"}); 
+
+    var SetDefaultsLinkHeightToFretsImage = SetDefaultsDiagramBottomGroup.add("image", undefined, File.decode(SetDefaultsLinkWidthToHeightImage_imgString), {name: "SetDefaultsLinkHeightToFretsImage"}); 
+
+    var SetDefaultsLinkHeightToFrets = SetDefaultsDiagramBottomGroup.add("statictext", undefined, undefined, {name: "SetDefaultsLinkHeightToFrets"}); 
+        SetDefaultsLinkHeightToFrets.text = "Height to Frets and Strings"; 
+
+    // SETDEFAULTSLINEARTTHICKNESSPANEL
+    // ================================
+    var SetDefaultsLineArtThicknessPanel = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsLineArtThicknessPanel"}); 
+        SetDefaultsLineArtThicknessPanel.enabled = false; 
+        SetDefaultsLineArtThicknessPanel.text = "Line Art Thickness"; 
+        SetDefaultsLineArtThicknessPanel.orientation = "column"; 
+        SetDefaultsLineArtThicknessPanel.alignChildren = ["left","top"]; 
+        SetDefaultsLineArtThicknessPanel.spacing = 10; 
+        SetDefaultsLineArtThicknessPanel.margins = 10; 
+
+    // SETDEFAULTSLINEARTTHICKNESSGROUP
+    // ================================
+    var SetDefaultsLineArtThicknessGroup = SetDefaultsLineArtThicknessPanel.add("group", undefined, {name: "SetDefaultsLineArtThicknessGroup"}); 
+        SetDefaultsLineArtThicknessGroup.orientation = "row"; 
+        SetDefaultsLineArtThicknessGroup.alignChildren = ["left","center"]; 
+        SetDefaultsLineArtThicknessGroup.spacing = 6; 
+        SetDefaultsLineArtThicknessGroup.margins = 0; 
+
+    // SETDEFAULTSLINEARTTHICKNESSSTRINGSGROUP
+    // =======================================
+    var SetDefaultsLineArtThicknessStringsGroup = SetDefaultsLineArtThicknessGroup.add("group", undefined, {name: "SetDefaultsLineArtThicknessStringsGroup"}); 
+        SetDefaultsLineArtThicknessStringsGroup.orientation = "row"; 
+        SetDefaultsLineArtThicknessStringsGroup.alignChildren = ["left","center"]; 
+        SetDefaultsLineArtThicknessStringsGroup.spacing = 1; 
+        SetDefaultsLineArtThicknessStringsGroup.margins = 0; 
+
+    var SetDefaultsLineArtThicknessStrings = SetDefaultsLineArtThicknessStringsGroup.add("statictext", undefined, undefined, {name: "SetDefaultsLineArtThicknessStrings"}); 
+        SetDefaultsLineArtThicknessStrings.text = "Strings"; 
+
+    var SetDefaultsLineArtThicknessStringsInput = SetDefaultsLineArtThicknessStringsGroup.add('edittext {properties: {name: "SetDefaultsLineArtThicknessStringsInput"}}'); 
+        SetDefaultsLineArtThicknessStringsInput.text = "auto"; 
+
+    // SETDEFAULTSLINEARTTHICKNESSLINKSTRINGSTOFRETSGROUP
+    // ==================================================
+    var SetDefaultsLineArtThicknessLinkStringsToFretsGroup = SetDefaultsLineArtThicknessGroup.add("group", undefined, {name: "SetDefaultsLineArtThicknessLinkStringsToFretsGroup"}); 
+        SetDefaultsLineArtThicknessLinkStringsToFretsGroup.orientation = "row"; 
+        SetDefaultsLineArtThicknessLinkStringsToFretsGroup.alignChildren = ["left","center"]; 
+        SetDefaultsLineArtThicknessLinkStringsToFretsGroup.spacing = 0; 
+        SetDefaultsLineArtThicknessLinkStringsToFretsGroup.margins = 0; 
+
+    var SetDefaultsLineArtThicknessLinkStringsToFretsCheckBox = SetDefaultsLineArtThicknessLinkStringsToFretsGroup.add("checkbox", undefined, undefined, {name: "SetDefaultsLineArtThicknessLinkStringsToFretsCheckBox"}); 
+
+    var SetDefaultsLineArtThicknessLinkStringsToFretsImage = SetDefaultsLineArtThicknessLinkStringsToFretsGroup.add("image", undefined, File.decode(SetDefaultsLinkWidthToHeightImage_imgString), {name: "SetDefaultsLineArtThicknessLinkStringsToFretsImage"}); 
+
+    // SETDEFAULTSLINEARTTHICKNESSFRETSGROUP
+    // =====================================
+    var SetDefaultsLineArtThicknessFretsGroup = SetDefaultsLineArtThicknessGroup.add("group", undefined, {name: "SetDefaultsLineArtThicknessFretsGroup"}); 
+        SetDefaultsLineArtThicknessFretsGroup.orientation = "row"; 
+        SetDefaultsLineArtThicknessFretsGroup.alignChildren = ["left","center"]; 
+        SetDefaultsLineArtThicknessFretsGroup.spacing = 0; 
+        SetDefaultsLineArtThicknessFretsGroup.margins = 0; 
+
+    var SetDefaultsLineArtThicknessFrets = SetDefaultsLineArtThicknessFretsGroup.add("statictext", undefined, undefined, {name: "SetDefaultsLineArtThicknessFrets"}); 
+        SetDefaultsLineArtThicknessFrets.text = "Frets"; 
+
+    var SetDefaultsLineArtThicknessFretsInput = SetDefaultsLineArtThicknessFretsGroup.add('edittext {properties: {name: "SetDefaultsLineArtThicknessFretsInput"}}'); 
+        SetDefaultsLineArtThicknessFretsInput.text = "auto"; 
+
+    // SETDEFAULTSLINEARTTHICKNESSNUTGROUP
+    // ===================================
+    var SetDefaultsLineArtThicknessNutGroup = SetDefaultsLineArtThicknessGroup.add("group", undefined, {name: "SetDefaultsLineArtThicknessNutGroup"}); 
+        SetDefaultsLineArtThicknessNutGroup.orientation = "row"; 
+        SetDefaultsLineArtThicknessNutGroup.alignChildren = ["center","top"]; 
+        SetDefaultsLineArtThicknessNutGroup.spacing = 0; 
+        SetDefaultsLineArtThicknessNutGroup.margins = 0; 
+        SetDefaultsLineArtThicknessNutGroup.alignment = ["left","center"]; 
+
+    var SetDefaultsLineArtThicknessNut = SetDefaultsLineArtThicknessNutGroup.add("statictext", undefined, undefined, {name: "SetDefaultsLineArtThicknessNut"}); 
+        SetDefaultsLineArtThicknessNut.text = "Nut"; 
+
+    var SetDefaultsLineArtThicknessNutInput = SetDefaultsLineArtThicknessNutGroup.add('edittext {properties: {name: "SetDefaultsLineArtThicknessNutInput"}}'); 
+        SetDefaultsLineArtThicknessNutInput.text = "auto"; 
+
+    // OPTIONSSETDEFAULTSTAB
+    // =====================
+    var SetDefaultsSupportGroup1 = OptionsSetDefaultsTab.add("statictext", undefined, undefined, {name: "SetDefaultsSupportGroup"}); 
+        SetDefaultsSupportGroup1.text = 'You will have more  custom options in a future'; 
+        SetDefaultsSupportGroup1.justify = "center"; 
+    var SetDefaultsSupportGroup2 = OptionsSetDefaultsTab.add("statictext", undefined, undefined, {name: "SetDefaultsSupportGroup"}); 
+        SetDefaultsSupportGroup2.text = 'update. Please consider to support this project!'; 
+        SetDefaultsSupportGroup2.justify = "center"; 
+
+    // SETDEFAULTSSUPPORT
+    // ==================
+    var SetDefaultsSupport = OptionsSetDefaultsTab.add("group", undefined, {name: "SetDefaultsSupport"}); 
+        SetDefaultsSupport.orientation = "column"; 
+        SetDefaultsSupport.alignChildren = ["fill","center"]; 
+        SetDefaultsSupport.spacing = 10; 
+        SetDefaultsSupport.margins = 0; 
+
+    var SetDefaultsSupportGroupB1 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB1"}); 
+        SetDefaultsSupportGroupB1.text = "Donate with PayPal"; 
+
+    var SetDefaultsSupportGroupB2 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB2"}); 
+        SetDefaultsSupportGroupB2.text = "Buy Me a Coffee"; 
+
+    var SetDefaultsSupportGroupB3 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB3"}); 
+        SetDefaultsSupportGroupB3.text = "Feedback and Bug Report"; 
+
+    // OPTIONSMANAGECHORDSTAB
+    // ======================
+    var OptionsManageChordsTab = OptionsTabPanel.add("tab", undefined, undefined, {name: "OptionsManageChordsTab"}); 
+        OptionsManageChordsTab.text = "Manage Chords"; 
+        OptionsManageChordsTab.orientation = "column"; 
+        OptionsManageChordsTab.alignChildren = ["center","center"]; 
+        OptionsManageChordsTab.spacing = 0; //10; 
+        OptionsManageChordsTab.margins = 10; 
+
+    // OPTIONSTABPANEL
+    // ===============
+    OptionsTabPanel.selection = OptionsFontsTab; 
+
+        OptionsTabPanel.onChange = function()
+        {
+            if(OptionsTabPanel.selection == OptionsManageChordsTab) ManageChordsButtonsGroup.visible = true;
+            else  ManageChordsButtonsGroup.visible = false;
+
+        }
+
+    // OPTIONSMANAGECHORDSGROUP
+    // ========================
+    var OptionsManageChordsGroup = OptionsManageChordsTab.add("group", undefined, {name: "OptionsManageChordsGroup"}); 
+        OptionsManageChordsGroup.enabled = false; 
+        OptionsManageChordsGroup.orientation = "row"; 
+        OptionsManageChordsGroup.alignChildren = ["left","top"]; 
+        OptionsManageChordsGroup.spacing = 0;//10; 
+        OptionsManageChordsGroup.margins = 0; 
+
+    var OptionsManageChordsFilter = OptionsManageChordsGroup.add("statictext", undefined, undefined, {name: "OptionsManageChordsFilter"}); 
+        OptionsManageChordsFilter.text = "Filter Chords by Name:"; 
+
+    var OptionsManageChordsFilterInput = OptionsManageChordsGroup.add('edittext {properties: {name: "OptionsManageChordsFilterInput"}}'); 
+        OptionsManageChordsFilterInput.preferredSize.width = 130; 
+
+    // OPTIONSMANAGECHORDSTAB
+    // ======================
+    var OptionsManageChordsList_array = ["Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","Your Saved Chord","","","","",""]; 
+    var OptionsManageChordsList = OptionsManageChordsTab.add("listbox", undefined, undefined, {name: "OptionsManageChordsList", items: OptionsManageChordsList_array, multiselect: true}); 
+        OptionsManageChordsList.enabled = false; 
+        OptionsManageChordsList.selection = 0; 
+        OptionsManageChordsList.preferredSize.width = 266; 
+
+    // OPTIONSMANAGESUPPORTGROUP
+    // =========================
+    var OptionsManageSupportGroup = OptionsManageChordsTab.add("group", undefined, {name: "OptionsManageSupportGroup"}); 
+        OptionsManageSupportGroup.orientation = "column"; 
+        OptionsManageSupportGroup.alignChildren = ["fill","center"]; 
+        OptionsManageSupportGroup.spacing = 10; 
+        OptionsManageSupportGroup.margins = 0; 
+
+    var OptionsManageSupport1 = OptionsManageSupportGroup.add("statictext", undefined, undefined, {name: "OptionsManageSupport"}); 
+        OptionsManageSupport1.text = "You will be able to manage your chords"; 
+        OptionsManageSupport1.justify = "center"; 
+    var OptionsManageSupport2 = OptionsManageSupportGroup.add("statictext", undefined, undefined, {name: "OptionsManageSupport"}); 
+        OptionsManageSupport2.text = "in a future update."; 
+        OptionsManageSupport2.justify = "center"; 
+    var OptionsManageSupport3 = OptionsManageSupportGroup.add("statictext", undefined, undefined, {name: "OptionsManageSupport"}); 
+        OptionsManageSupport3.text = "Please consider to support this project!"; 
+        OptionsManageSupport3.justify = "center"; 
+
+    var OptionsManageSupportB1 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB1"}); 
+        OptionsManageSupportB1.text = "Donate with PayPal"; 
+
+    var OptionsManageSupportB2 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB2"}); 
+        OptionsManageSupportB2.text = "Buy Me a Coffee"; 
+
+    var OptionsManageSupportB3 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB3"}); 
+        OptionsManageSupportB3.text = "Feedback and Bug Report"; 
+
+    // OPTIONSTBUTTONSGROUP
+    // ====================
+    var OptionstButtonsGroup = OptionsDialog.add("group", undefined, {name: "OptionstButtonsGroup"}); 
+        OptionstButtonsGroup.preferredSize.width = 80; 
+        OptionstButtonsGroup.orientation = "column"; 
+        OptionstButtonsGroup.alignChildren = ["fill","top"]; 
+        OptionstButtonsGroup.spacing = 11; 
+        OptionstButtonsGroup.margins = [7,0,0,0]; 
+
+    // TOPOPTIONSBUTTONSGROUP
+    // ======================
+    var TopOptionsButtonsGroup = OptionstButtonsGroup.add("group", undefined, {name: "TopOptionsButtonsGroup"}); 
+        TopOptionsButtonsGroup.preferredSize.height = 68; 
+        TopOptionsButtonsGroup.orientation = "column"; 
+        TopOptionsButtonsGroup.alignChildren = ["fill","bottom"]; 
+        TopOptionsButtonsGroup.spacing = 10; 
+        TopOptionsButtonsGroup.margins = 0; 
+
+    var OptionsApplyBtn = TopOptionsButtonsGroup.add("button", undefined, undefined, {name: "OptionsApplyBtn"}); 
+        OptionsApplyBtn.text = "Apply"; 
+        OptionsApplyBtn.preferredSize.width = 80; 
+
+            OptionsApplyBtn.onClick = function()
+            {
+                alert("Apply");
+            }
+
+    var OptionsCancelBtn = TopOptionsButtonsGroup.add("button", undefined, undefined, {name: "OptionsCancelBtn"}); 
+        OptionsCancelBtn.text = "Cancel"; 
+
+            OptionsCancelBtn.onClick = function()
+            {
+                OptionsDialog.close();
+            }
+
+    // BOTTOMOPTIONSBUTTONSGROUP
+    // =========================
+    var BottomOptionsButtonsGroup = OptionstButtonsGroup.add("group", undefined, {name: "BottomOptionsButtonsGroup"}); 
+        BottomOptionsButtonsGroup.preferredSize.height = 27; 
+        BottomOptionsButtonsGroup.orientation = "column"; 
+        BottomOptionsButtonsGroup.alignChildren = ["fill","center"]; 
+        BottomOptionsButtonsGroup.spacing = 11; 
+        BottomOptionsButtonsGroup.margins = 0; 
+
+    var DefaultFontButton = BottomOptionsButtonsGroup.add("button", undefined, undefined, {name: "DefaultFontButton"}); 
+        DefaultFontButton.text = "Default"; 
+
+            DefaultFontButton.onClick = function()
+            {
+                alert("Default");
+            }
+
+    // MANAGECHORDSBUTTONSGROUP
+    // ========================
+    var ManageChordsButtonsGroup = OptionstButtonsGroup.add("group", undefined, {name: "ManageChordsButtonsGroup"}); 
+        ManageChordsButtonsGroup.enabled = false;
+        ManageChordsButtonsGroup.visible = false; 
+        ManageChordsButtonsGroup.preferredSize.height = 439; 
+        ManageChordsButtonsGroup.orientation = "column"; 
+        ManageChordsButtonsGroup.alignChildren = ["fill","bottom"]; 
+        ManageChordsButtonsGroup.spacing = 10; 
+        ManageChordsButtonsGroup.margins = 0; 
+
+    var ManageChordsDivider = ManageChordsButtonsGroup.add("panel", undefined, undefined, {name: "ManageChordsDivider"}); 
+        ManageChordsDivider.alignment = "fill"; 
+
+    var ManageChordsDeleteButtons = ManageChordsButtonsGroup.add("button", undefined, undefined, {name: "ManageChordsDeleteButtons"}); 
+        ManageChordsDeleteButtons.text = "Delete Selected";
+        ManageChordsDeleteButtons.helpTip = "This functionality will be available in a future update";
+
+    var ManageChordsDublicateButtons = ManageChordsButtonsGroup.add("button", undefined, undefined, {name: "ManageChordsDublicateButtons"}); 
+        ManageChordsDublicateButtons.text = "Dublicate"; 
+        ManageChordsDublicateButtons.helpTip = "This functionality will be available in a future update";
+
+    var ManageChordsMakeBackupButtons = ManageChordsButtonsGroup.add("button", undefined, undefined, {name: "ManageChordsMakeBackupButtons"}); 
+        ManageChordsMakeBackupButtons.text = "Make Backup";
+        ManageChordsMakeBackupButtons.helpTip = "This functionality will be available in a future update"; 
+
+    var ManageChordsRestoreBackupButtons = ManageChordsButtonsGroup.add("button", undefined, undefined, {name: "ManageChordsRestoreBackupButtons"}); 
+        ManageChordsRestoreBackupButtons.text = "Restore Backup";
+        ManageChordsRestoreBackupButtons.helpTip = "This functionality will be available in a future update"; 
+
+   OptionsDialog.show();
+
+    //return OptionsDialog;
+}
+
+
 // Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 150	 Text: Helpers
 
 // ooooo   ooooo           oooo                                         
@@ -1861,6 +2845,22 @@ function setDefaultAt(index)
             prefs.unlockByDefault = false;
             return true;
             break;
+        case PrefID.chordNameFont:
+            prefs.chordNameFont = DEFAULT_FONT;
+            return true;
+            break;
+        case PrefID.chordNameFontSize:
+            prefs.chordNameFontSize = AUTO;
+            return true;
+            break;
+        case PrefID.chordNameFontH:
+            prefs.chordNameFontH = "0";
+            return true;
+            break;
+        case PrefID.chordNameFontV:
+            prefs.chordNameFontV = "0";
+            return true;
+            break;
         
         default:
             return false;
@@ -1868,6 +2868,18 @@ function setDefaultAt(index)
     }
 }
 
+function getDefaultFont()
+{
+    var fontCount = textFonts.length;
+   
+    var defaultFont = ScriptUI.newFont("palette").name;
+    for (var i = 0; i < fontCount; i++) {
+        
+        if (textFonts[i].name == "PetalumaScript" || textFonts[i].name == "Petaluma Script")  defaultFont = textFonts[i].name;
+    }
+
+    return defaultFont;
+}
 
 function init()
 {
