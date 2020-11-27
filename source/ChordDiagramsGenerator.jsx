@@ -37,15 +37,27 @@ PrefID = {
     chordNameFontSize:29,
     chordNameFontH:30,
     chordNameFontV:31,
-    
-    size:32
+    fingersUsedFont:32,
+    fingersUsedFontSize:33,
+    fingersUsedFontH:34,
+    fingersUsedFontV:35,
+    fretPositionsFont:36,
+    fretPositionsFontSize:37,
+    fretPositionsFontH:38,
+    fretPositionsFontV:39,
+    fretNumberFont:40,
+    fretNumberFontSize:41,
+    fretNumberFontH:42,
+    fretNumberFontV:43,
+
+    size:41
 };
 
 DEBUG                               = true;
 WINDOW_WIDTH                        = 500;
 WINDOW_HEIGHT_SMALL                 = 278;
 WINDOW_HEIGHT_BIG                   = 490;
-VERSION                             = "v0.2.3"
+VERSION                             = "v0.3.1"
 LINK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82";
 LOCK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0E%08%06%00%00%00%16%C2%A3%C2%8D%C2%AB%00%00%00%09pHYs%00%00%000%00%00%000%011Y'%C3%BA%00%00%00%C2%9BIDAT(%C2%91%7D%C2%90%C3%AB%0D%C3%820%0C%C2%84%C2%AF%C2%88%C3%9F%C2%A6%23u%C2%842I%C3%95%09%60%03%60%C2%82%C2%8E%00%1B%C3%90%11%60%12%C3%90-Pt%C3%88%C2%91%2C%2B%C3%8AIV%C2%AC%C3%8B%17%3F%02%C2%89dOr!%C2%B9%C2%A5%C2%B8%C3%80%C2%B5%C3%B7%C3%B3%04%60%040%03x%C2%B97%C3%88'%093%C2%9BKE%C2%BD%3E%23I%1E%C3%89%C2%8F%C3%9C%5D%C2%B8Z3%C3%A8%5E%C2%9F%C3%81%C2%A6%3A%C2%92O%C2%9F%C2%A7%C2%A5U%C3%A0%C2%96%C2%80%C2%87%C2%9Fc4s%C3%AB%C2%AB%C2%99%1D%15%C3%8A%5B%C3%A0%3B%C3%A4%C3%BF%25%C2%8Ar%C3%AB%2F%00U%13t%C2%8F%60%C3%B9%C3%B0X%C2%A5%C2%BAX%06%C2%A5C%0D%C2%ACm%5D%C2%95*j%C2%A6%C2%A9I%01%C2%B7%1F3%C3%AFG%02T%05%C3%AC%26%00%00%00%00IEND%C2%AEB%60%C2%82"; 
 ERROR_MSG                           = "Something went wrong: "; 
@@ -86,12 +98,25 @@ CHORD_NAME_FONT_SIZE                = "chordNameFontSize";
 CHORD_NAME_FONT_H                   = "chordNameFontH";
 CHORD_NAME_FONT_V                   = "chordNameFontV";
 
-FINGERS_USED_FONT                   = "FingersUsedFont";
-FRET_POSITION_LOCK                  = "FretPositionsFont";
-FRET_NUMBER_FONT                    = "FretNumberFont";
+FINGERS_USED_FONT                   = "fingersUsedFont";
+FINGERS_USED_FONT_SIZE              = "fingersUsedFontSize";
+FINGERS_USED_FONT_H                 = "fingersUsedFontH";
+FINGERS_USED_FONT_V                 = "fingersUsedFontV";
 
-DEFAULT_FONT                        = getDefaultFont();
-DEFAULT_NUMERIC_FONT                = ScriptUI.newFont("palette").name;
+FRET_POSITION_FONT                  = "fretPositionsFont";
+FRET_POSITION_FONT_SIZE             = "fretPositionsFontSize";
+FRET_POSITION_FONT_H                = "fretPositionsFontH";
+FRET_POSITION_FONT_V                = "fretPositionsFontV";
+
+FRET_NUMBER_FONT                    = "fretNumberFont";
+FRET_NUMBER_FONT_SIZE               = "fretNumberFontSize";
+FRET_NUMBER_FONT_H                  = "fretNumberFontH";
+FRET_NUMBER_FONT_V                  = "fretNumberFontV";
+
+DEFAULT_FONT                        = getDefaultFont("PetalumaScript", "Petaluma Script");
+DEFAULT_NUMERIC_FONT                = getDefaultFont("PetalumaText", "Petaluma Text");
+
+// end of constants
 
 init();
 
@@ -137,6 +162,18 @@ function loadPreferences()
         setDefaultAt(PrefID.chordNameFontSize);   
         setDefaultAt(PrefID.chordNameFontH);   
         setDefaultAt(PrefID.chordNameFontV);   
+        setDefaultAt(PrefID.fingersUsedFont);   
+        setDefaultAt(PrefID.fingersUsedFontSize); 
+        setDefaultAt(PrefID.fingersUsedFontH); 
+        setDefaultAt(PrefID.fingersUsedFontV); 
+        setDefaultAt(PrefID.fretPositionsFont); 
+        setDefaultAt(PrefID.fretPositionsFontSize); 
+        setDefaultAt(PrefID.fretPositionsFontH); 
+        setDefaultAt(PrefID.fretPositionsFontV); 
+        setDefaultAt(PrefID.fretNumberFont); 
+        setDefaultAt(PrefID.fretNumberFontSize); 
+        setDefaultAt(PrefID.fretNumberFontH); 
+        setDefaultAt(PrefID.fretNumberFontV);
     }
     else
     {
@@ -290,6 +327,54 @@ function loadPreferences()
                 case CHORD_NAME_FONT_V:
                     prefs.chordNameFontV = (data[i] == undefined) ? setDefaultAt(PrefID.chordNameFontV) : data[i];
                     checkData[PrefID.chordNameFontV] = true;
+                    break; 
+                case FINGERS_USED_FONT:
+                    prefs.fingersUsedFont = (data[i] == undefined) ? setDefaultAt(PrefID.FingersUsedFont) : data[i];
+                    checkData[PrefID.fingersUsedFont] = true;
+                    break; 
+                case FINGERS_USED_FONT_SIZE:
+                    prefs.fingersUsedFontSize = (data[i] == undefined) ? setDefaultAt(PrefID.fingersUsedFontSize) : data[i];
+                    checkData[PrefID.fingersUsedFontSize] = true;
+                    break; 
+                case FINGERS_USED_FONT_H:
+                    prefs.fingersUsedFontH = (data[i] == undefined) ? setDefaultAt(PrefID.fingersUsedFontH) : data[i];
+                    checkData[PrefID.fingersUsedFontH] = true;
+                    break; 
+                case FINGERS_USED_FONT_V:
+                    prefs.fingersUsedFontV = (data[i] == undefined) ? setDefaultAt(PrefID.fingersUsedFontV) : data[i];
+                    checkData[PrefID.fingersUsedFontV] = true;
+                    break; 
+                case FRET_POSITION_FONT:
+                    prefs.fretPositionsFont = (data[i] == undefined) ? setDefaultAt(PrefID.fretPositionsFont) : data[i];
+                    checkData[PrefID.fretPositionsFont] = true;
+                    break; 
+                case FRET_POSITION_FONT_SIZE:
+                    prefs.fretPositionsFontSize = (data[i] == undefined) ? setDefaultAt(PrefID.fretPositionsFontSize) : data[i];
+                    checkData[PrefID.fretPositionsFontSize] = true;
+                    break; 
+                case FRET_POSITION_FONT_H:
+                    prefs.fretPositionsFontH = (data[i] == undefined) ? setDefaultAt(PrefID.fretPositionsFontH) : data[i];
+                    checkData[PrefID.fretPositionsFontH] = true;
+                    break; 
+                case FRET_POSITION_FONT_V:
+                    prefs.fretPositionsFontV = (data[i] == undefined) ? setDefaultAt(PrefID.fretPositionsFontV) : data[i];
+                    checkData[PrefID.fretPositionsFontV] = true;
+                    break; 
+                case FRET_NUMBER_FONT:
+                    prefs.fretNumberFont = (data[i] == undefined) ? setDefaultAt(PrefID.fretNumberFont) : data[i];
+                    checkData[PrefID.fretNumberFont] = true;
+                    break; 
+                case FRET_NUMBER_FONT_SIZE:
+                    prefs.fretNumberFontSize = (data[i] == undefined) ? setDefaultAt(PrefID.fretNumberFontSize) : data[i];
+                    checkData[PrefID.fretNumberFontSize] = true;
+                    break; 
+                case FRET_NUMBER_FONT_H:
+                    prefs.fretNumberFontH = (data[i] == undefined) ? setDefaultAt(PrefID.fretNumberFontH) : data[i];
+                    checkData[PrefID.fretNumberFontH] = true;
+                    break; 
+                case FRET_NUMBER_FONT_V:
+                    prefs.fretNumberFontV = (data[i] == undefined) ? setDefaultAt(PrefID.fretNumberFontV) : data[i];
+                    checkData[PrefID.fretNumberFontV] = true;
                     break; 
             }
         }
@@ -1319,7 +1404,7 @@ var lastDiagramHeightInput = DiagramHeightInput.text;
         LineArtThicknessStringsInput.preferredSize.height = 23; 
         LineArtThicknessStringsInput.alignment = ["left","center"];
 var lastLineArtThicknessStringsInput = LineArtThicknessStringsInput.text;
-            //prefs.isLinkThickness
+            
             LineArtThicknessStringsInput.onChange = function() 
             {
                 LineArtThicknessStringsInput.text = evalInput(LineArtThicknessStringsInput.text, lastLineArtThicknessStringsInput, true);
@@ -1800,6 +1885,12 @@ function showOptionsDialog()
         ChordNameFontSizeInput.preferredSize.width = 45; 
         ChordNameFontSizeInput.alignment = ["center","top"]; 
 
+            ChordNameFontSizeInput.onChange = function()
+            {
+                ChordNameFontSizeInput.text = evalInput( ChordNameFontSizeInput.text, AUTO, true);
+                prefs.chordNameFontSize = ChordNameFontSizeInput.text;
+            }
+
     // CHORDNAMEFONTOFFSETPANEL
     // ========================
     var ChordNameFontOffsetPanel = ChordNameFontBottomGroup.add("panel", undefined, undefined, {name: "ChordNameFontOffsetPanel"}); 
@@ -1826,6 +1917,14 @@ function showOptionsDialog()
         ChordNameFontHInput.text = prefs.chordNameFontH; 
         ChordNameFontHInput.preferredSize.width = 42; 
 
+            var lastChordNameFontHInput = ChordNameFontHInput.text;
+            ChordNameFontHInput.onChange = function()
+            {
+                ChordNameFontHInput.text = evalInput( ChordNameFontHInput.text, lastChordNameFontHInput);
+                lastChordNameFontHInput = ChordNameFontHInput.text;
+                prefs.chordNameFontH = ChordNameFontHInput.text;
+            }
+
     // CHORDNAMEFONTOFFSETVGROUP
     // =========================
     var ChordNameFontOffsetVGroup = ChordNameFontOffsetPanel.add("group", undefined, {name: "ChordNameFontOffsetVGroup"}); 
@@ -1841,6 +1940,14 @@ function showOptionsDialog()
         ChordNameFontVInput.helpTip = "Fine Tune the position vertically "; 
         ChordNameFontVInput.text = prefs.chordNameFontV; 
         ChordNameFontVInput.preferredSize.width = 42; 
+
+            var lastChordNameFontVInput = ChordNameFontVInput.text;
+            ChordNameFontVInput.onChange = function()
+            {
+                ChordNameFontVInput.text = evalInput( ChordNameFontVInput.text, lastChordNameFontVInput);
+                lastChordNameFontVInput = ChordNameFontVInput.text;
+                prefs.chordNameFontV = ChordNameFontVInput.text;
+            }
 
 
     // FINGERSUSEDFONTGROUP
@@ -1891,9 +1998,15 @@ function showOptionsDialog()
 
     var FingersUsedFontSizeInput = FingersUsedFontSizePanel.add('edittext {properties: {name: "FingersUsedFontSizeInput"}}'); 
         FingersUsedFontSizeInput.helpTip = "Set the font size"; 
-        FingersUsedFontSizeInput.text = "auto"; 
+        FingersUsedFontSizeInput.text = prefs.fingersUsedFontSize; 
         FingersUsedFontSizeInput.preferredSize.width = 45; 
         FingersUsedFontSizeInput.alignment = ["center","top"]; 
+
+            FingersUsedFontSizeInput.onChange = function()
+            {
+                FingersUsedFontSizeInput.text = evalInput( FingersUsedFontSizeInput.text, AUTO, true);
+                prefs.fingersUsedFontSize = FingersUsedFontSizeInput.text;
+            }
 
     // FINGERSUSEDFONTOFFSETPANEL
     // ==========================
@@ -1918,9 +2031,17 @@ function showOptionsDialog()
 
     var FingersUsedFontHInput = FingersUsedFontOffsetHGroup.add('edittext {properties: {name: "FingersUsedFontHInput"}}'); 
         FingersUsedFontHInput.helpTip = "Fine tune the position horizontally "; 
-        FingersUsedFontHInput.text = "0"; 
+        FingersUsedFontHInput.text = prefs.fingersUsedFontH; 
         FingersUsedFontHInput.preferredSize.width = 42; 
 
+            var lastFingersUsedFontHInput = FingersUsedFontHInput.text;
+            FingersUsedFontHInput.onChange = function()
+            {
+                FingersUsedFontHInput.text = evalInput( FingersUsedFontHInput.text, lastFingersUsedFontHInput);
+                lastFingersUsedFontHInput = FingersUsedFontHInput.text;
+                prefs.fingersUsedFontH = FingersUsedFontHInput.text;
+            }
+                    
     // FINGERSUSEDFONTOFFSETVGROUP
     // ===========================
     var FingersUsedFontOffsetVGroup = FingersUsedFontOffsetPanel.add("group", undefined, {name: "FingersUsedFontOffsetVGroup"}); 
@@ -1934,8 +2055,16 @@ function showOptionsDialog()
 
     var FingersUsedFontVInput = FingersUsedFontOffsetVGroup.add('edittext {properties: {name: "FingersUsedFontVInput"}}'); 
         FingersUsedFontVInput.helpTip = "Fine Tune the position vertically "; 
-        FingersUsedFontVInput.text = "0"; 
+        FingersUsedFontVInput.text = prefs.fingersUsedFontV; 
         FingersUsedFontVInput.preferredSize.width = 42; 
+
+            var lastFingersUsedFontVInput = FingersUsedFontVInput.text;
+            FingersUsedFontVInput.onChange = function()
+            {
+                FingersUsedFontVInput.text = evalInput( FingersUsedFontVInput.text, lastFingersUsedFontVInput);
+                lastFingersUsedFontVInput = FingersUsedFontVInput.text;
+                prefs.fingersUsedFontV = FingersUsedFontVInput.text;
+            }
 
     // FRETPOSITIONSFONTGROUP
     // ======================
@@ -1985,9 +2114,15 @@ function showOptionsDialog()
 
     var FretPositionsFontSizeInput = FretPositionsFontSizePanel.add('edittext {properties: {name: "FretPositionsFontSizeInput"}}'); 
         FretPositionsFontSizeInput.helpTip = "Set the font size"; 
-        FretPositionsFontSizeInput.text = "auto"; 
+        FretPositionsFontSizeInput.text = prefs.fretPositionsFontSize; 
         FretPositionsFontSizeInput.preferredSize.width = 45; 
         FretPositionsFontSizeInput.alignment = ["center","top"]; 
+
+            FretPositionsFontSizeInput.onChange = function()
+            {
+                FretPositionsFontSizeInput.text = evalInput( FretPositionsFontSizeInput.text, AUTO, true);
+                prefs.fretPositionsFontSize = FretPositionsFontSizeInput.text;
+            }
 
     // FRETPOSITIONSFONTOFFSETPANEL
     // ============================
@@ -2012,8 +2147,16 @@ function showOptionsDialog()
 
     var FretPositionsFontHInput = FretPositionsFontOffsetHGroup.add('edittext {properties: {name: "FretPositionsFontHInput"}}'); 
         FretPositionsFontHInput.helpTip = "Fine tune the position horizontally "; 
-        FretPositionsFontHInput.text = "0"; 
+        FretPositionsFontHInput.text = prefs.fretPositionsFontH; 
         FretPositionsFontHInput.preferredSize.width = 42; 
+
+            var lastFretPositionsFontHInput = FretPositionsFontHInput.text;
+            FretPositionsFontHInput.onChange = function()
+            {
+                FretPositionsFontHInput.text = evalInput( FretPositionsFontHInput.text, lastFretPositionsFontHInput);
+                lastFretPositionsFontHInput = FretPositionsFontHInput.text;
+                prefs.fretPositionsFontH = FretPositionsFontHInput.text;
+            }
 
     // FRETPOSITIONSFONTOFFSETVGROUP
     // =============================
@@ -2028,8 +2171,16 @@ function showOptionsDialog()
 
     var FretPositionsFontVInput = FretPositionsFontOffsetVGroup.add('edittext {properties: {name: "FretPositionsFontVInput"}}'); 
         FretPositionsFontVInput.helpTip = "Fine Tune the position vertically "; 
-        FretPositionsFontVInput.text = "0"; 
+        FretPositionsFontVInput.text = prefs.fretPositionsFontV; 
         FretPositionsFontVInput.preferredSize.width = 42; 
+
+            var lastFretPositionsFontVInput = FretPositionsFontVInput.text;
+            FretPositionsFontVInput.onChange = function()
+            {
+                FretPositionsFontVInput.text = evalInput( FretPositionsFontVInput.text, lastFretPositionsFontVInput);
+                lastFretPositionsFontVInput = FretPositionsFontVInput.text;
+                prefs.fretPositionsFontV = FretPositionsFontVInput.text;
+            }
 
     // FRETNUMBERFONTGROUP
     // ===================
@@ -2079,9 +2230,15 @@ function showOptionsDialog()
 
     var FretNumberFontSizeInput = FretNumberFontSizePanel.add('edittext {properties: {name: "FretNumberFontSizeInput"}}'); 
         FretNumberFontSizeInput.helpTip = "Set the font size"; 
-        FretNumberFontSizeInput.text = "auto"; 
+        FretNumberFontSizeInput.text = prefs.fretNumberFontSize; 
         FretNumberFontSizeInput.preferredSize.width = 45; 
         FretNumberFontSizeInput.alignment = ["center","top"]; 
+
+             FretNumberFontSizeInput.onChange = function()
+            {
+                FretNumberFontSizeInput.text = evalInput( FretNumberFontSizeInput.text, AUTO, true);
+                prefs.fretNumberFontSize = FretNumberFontSizeInput.text;
+            }
 
     // FRETNUMBERFONTOFFSETPANEL
     // =========================
@@ -2106,9 +2263,17 @@ function showOptionsDialog()
 
     var FretNumberFontHInput = FretNumberFontOffsetHGroup.add('edittext {properties: {name: "FretNumberFontHInput"}}'); 
         FretNumberFontHInput.helpTip = "Fine tune the position horizontally "; 
-        FretNumberFontHInput.text = "0"; 
+        FretNumberFontHInput.text = prefs.fretNumberFontH; 
         FretNumberFontHInput.preferredSize.width = 42; 
 
+            var lastFretNumberFontHInput = FretNumberFontHInput.text;
+            FretNumberFontHInput.onChange = function()
+            {
+                FretNumberFontHInput.text = evalInput( FretNumberFontHInput.text, lastFretNumberFontHInput);
+                lastFretNumberFontHInput = FretNumberFontHInput.text;
+                prefs.fretNumberFontH = FretNumberFontHInput.text;
+            }
+                    
     // FRETNUMBERFONTOFFSETVGROUP
     // ==========================
     var FretNumberFontOffsetVGroup = FretNumberFontOffsetPanel.add("group", undefined, {name: "FretNumberFontOffsetVGroup"}); 
@@ -2122,10 +2287,17 @@ function showOptionsDialog()
 
     var FretNumberFontVInput = FretNumberFontOffsetVGroup.add('edittext {properties: {name: "FretNumberFontVInput"}}'); 
         FretNumberFontVInput.helpTip = "Fine Tune the position vertically "; 
-        FretNumberFontVInput.text = "0"; 
-        FretNumberFontVInput.preferredSize.width = 42; 
+        FretNumberFontVInput.text = prefs.fretNumberFontV; 
+        FretNumberFontVInput.preferredSize.width = 42;
 
-            //HERE
+            var lastFretNumberFontVInput = FretNumberFontVInput.text;
+            FretNumberFontVInput.onChange = function()
+            {
+                FretNumberFontVInput.text = evalInput( FretNumberFontVInput.text, lastFretNumberFontVInput);
+                lastFretNumberFontVInput = FretNumberFontVInput.text;
+                prefs.fretNumberFontV = FretNumberFontVInput.text;
+            } 
+
           // populate dropdown menus with fonts
             var iCount = textFonts.length;
             var fontList = [];
@@ -2141,10 +2313,17 @@ function showOptionsDialog()
                 FretNumberFontDropDown.add("item", sFontName);
             }
   
-            ChordNameFontDropDown.selection = ChordNameFontDropDown.items[getIndexOf(fontList, prefs.chordNameFont)];
-            FingersUsedFontDropDown.selection = 0;
-            FretPositionsFontDropDown.selection = 0;
-            FretNumberFontDropDown.selection = 0;
+            try{ChordNameFontDropDown.selection = ChordNameFontDropDown.items[getIndexOf(fontList, prefs.chordNameFont)];}
+            catch(e){ChordNameFontDropDown.selection = ChordNameFontDropDown.items[getIndexOf(fontList, ScriptUI.newFont("window"))];}
+
+            try {FingersUsedFontDropDown.selection = FingersUsedFontDropDown.items[getIndexOf(fontList, prefs.fingersUsedFont)];}
+            catch(e){FingersUsedFontDropDown.selection = FingersUsedFontDropDown.items[getIndexOf(fontList, ScriptUI.newFont("window"))];}
+
+            try {FretPositionsFontDropDown.selection = FretPositionsFontDropDown.items[getIndexOf(fontList, prefs.fretPositionsFont)];}
+            catch(e){FretPositionsFontDropDown.selection = FretPositionsFontDropDown.items[getIndexOf(fontList, ScriptUI.newFont("window"))];}
+
+            try {FretNumberFontDropDown.selection = FretNumberFontDropDown.items[getIndexOf(fontList, prefs.fretNumberFont)];}
+            catch(e){FretNumberFontDropDown.selection = FretNumberFontDropDown.items[getIndexOf(fontList, ScriptUI.newFont("window"))];}
             
             //fontListMenu.selection = fontListMenu.items[getIndexOf(fontList, prefs.chordFontLabel)];
             //fontListMenuFrets.selection = fontListMenuFrets.items[getIndexOf(fontList, prefs.chordFont)];
@@ -2861,21 +3040,69 @@ function setDefaultAt(index)
             prefs.chordNameFontV = "0";
             return true;
             break;
-        
+        case PrefID.fingersUsedFont:
+            prefs.fingersUsedFont = DEFAULT_NUMERIC_FONT;
+            return true;
+            break;
+        case PrefID.fingersUsedFontSize:
+            prefs.fingersUsedFontSize = AUTO;
+            return true;
+            break;
+        case PrefID.fingersUsedFontH:
+            prefs.fingersUsedFontH = "0";
+            return true;
+            break;
+        case PrefID.fingersUsedFontV:
+            prefs.fingersUsedFontV = "0";
+            return true;
+            break; 
+        case PrefID.fretPositionsFont:
+            prefs.fretPositionsFont = DEFAULT_NUMERIC_FONT;
+            return true;
+            break; 
+        case PrefID.fretPositionsFontSize:
+            prefs.fretPositionsFontSize = AUTO;
+            return true;
+            break; 
+        case PrefID.fretPositionsFontH:
+            prefs.fretPositionsFontH = "0";
+            return true;
+            break; 
+        case PrefID.fretPositionsFontV:
+            prefs.fretPositionsFontV = "0";
+            return true;
+            break; 
+        case PrefID.fretNumberFont:
+            prefs.fretNumberFont = DEFAULT_NUMERIC_FONT;
+            return true;
+            break; 
+        case PrefID.fretNumberFontSize:
+            prefs.fretNumberFontSize = AUTO;
+            return true;
+            break; 
+        case PrefID.fretNumberFontH:
+            prefs.fretNumberFontH = "0";
+            return true;
+            break; 
+        case PrefID.fretNumberFontV:
+            prefs.fretNumberFontV = "0";
+            return true;
+            break; 
+
         default:
             return false;
             break;
     }
 }
 
-function getDefaultFont()
+function getDefaultFont(font, altfont)
 {
     var fontCount = textFonts.length;
    
-    var defaultFont = ScriptUI.newFont("palette").name;
-    for (var i = 0; i < fontCount; i++) {
-        
-        if (textFonts[i].name == "PetalumaScript" || textFonts[i].name == "Petaluma Script")  defaultFont = textFonts[i].name;
+    var defaultFont = ScriptUI.newFont("window").name;
+    for (var i = 0; i < fontCount; i++) 
+    {
+        if (textFonts[i].name == font || textFonts[i].name == altfont)  defaultFont = textFonts[i].name;
     }
 
     return defaultFont;

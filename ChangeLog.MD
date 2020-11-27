@@ -3,6 +3,17 @@
 ```
 
 ```
+## [0.3.1] 
+### Added
+- FingersUsedFontDropDown fonts population
+- FingersUsedFontSizeInput, FingersUsedFontHInput and FingersUsedFontVInput implementation
+- FretNumberFontDropDown fonts population
+- FretNumberFontSizeInput, FretNumberFontHInput and FretNumberFontVInput implementation
+- ChordNameFontSizeInput, ChordNameFontHInput and ChordNameFontVInput input evaluation
+- FingersUsedFontSizeInput, FingersUsedFontHInput and FingersUsedFontVInput input evaluation
+-FretPositionsFontSizeInput, FretPositionsFontHInput and FretPositionsFontVInput input evaluation
+- FretNumberFontSizeInput, FretNumberFontHInput and FretNumberFontVInput input evaluation
+
 ## [0.2.3] 
 ### Added
 - Options dialog
