@@ -3,6 +3,13 @@
 ```
 
 ```
+## [0.3.4] 
+### Added
+- An if statement to check if the script is already running, if it does the script will not run
+- An if statement to check if the options dialog is already open, if it is already open it will not open again
+### Changed
+- The [Close] button of the main window, to [Quit] button
+
 ## [0.3.1] 
 ### Added
 - FingersUsedFontDropDown fonts population
