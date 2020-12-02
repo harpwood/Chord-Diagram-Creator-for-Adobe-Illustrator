@@ -3,6 +3,13 @@
 ```
 
 ```
+## [0.3.8] 
+### Added
+- [Apply] button in options implemented for the fonts Tab. Now this button will save all the font changes
+- [Defaults] button in options implemented for the fonts Tab. Now this button will restore all the font changes to default values
+- Some refactoring and UI reformating
+- The openURL function
+
 ## [0.3.4] 
 ### Added
 - An if statement to check if the script is already running, if it does the script will not run
