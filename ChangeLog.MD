@@ -3,6 +3,14 @@
 ```
 
 ```
+
+## [0.4.0] 
+### Added
+- Support buttons functionality in options dialog
+- [Factory Reset] button functionality in options dialog
+### Removed
+- Some typos
+
 ## [0.3.8] 
 ### Added
 - [Apply] button in options implemented for the fonts Tab. Now this button will save all the font changes

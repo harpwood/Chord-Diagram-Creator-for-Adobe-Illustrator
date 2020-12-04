@@ -57,7 +57,7 @@ DEBUG                               = false;
 WINDOW_WIDTH                        = 500;
 WINDOW_HEIGHT_SMALL                 = 278;
 WINDOW_HEIGHT_BIG                   = 490;
-VERSION                             = "v0.3.8"
+VERSION                             = "v0.4.0"
 LINK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0A%08%06%00%00%00%C2%8D2%C3%8F%C2%BD%00%00%00%09pHYs%00%00%1EB%00%00%1EB%01K%C3%A3%C3%B9%C2%AD%00%00%00%C2%A5IDAT%18%C2%95u%C2%90Q%0D%021%10D%1F%17%04%C2%9C%C2%84%C2%B6%0A%C2%90%40%1D%20%01%14%10%14%20%01P%40P%00%0E%40%02%0A%C3%9AJ%C3%80%01d%C2%9A%C2%BD%C3%8B%C3%81%1D%C3%B3%C3%93t2%C3%997%C2%BB3%26%C2%94rY%00g%40%C3%AF%0B%C3%985SA%C3%A0%008%05%C2%80%C2%A2%C3%BF%C2%BF%C3%A0%09%C2%88%C3%81%C2%BB%23p%01%C3%9A%1E%C2%9Drq6i%05%3C%C2%82w%C3%91*%C3%9C%C2%85%C2%AF%C3%81%C2%81!%C3%9D%C2%80%C2%A5a%C3%95S%C2%8A%C3%8DO(Z7%C3%A1%C3%BAP%C3%B0%C3%AE%C2%A9%C2%8E%C3%97%C2%A1a%C3%81%C2%BDm%C3%9By%15%C3%BBN%C2%B9%C2%AC%C2%BB%C2%9EF%18in%C3%8E6%C3%A5%C3%92%C3%9A%24MP%C2%85%2F%09%C2%BD%C2%B1%C3%83j%C3%A3z%C3%9C%C3%918%C3%A0%03Z%C3%868t%C2%86%C3%B2I%C3%A4%00%00%00%00IEND%C2%AEB%60%C2%82";
 LOCK_ICON                           = "%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0A%00%00%00%0E%08%06%00%00%00%16%C2%A3%C2%8D%C2%AB%00%00%00%09pHYs%00%00%000%00%00%000%011Y'%C3%BA%00%00%00%C2%9BIDAT(%C2%91%7D%C2%90%C3%AB%0D%C3%820%0C%C2%84%C2%AF%C2%88%C3%9F%C2%A6%23u%C2%842I%C3%95%09%60%03%60%C2%82%C2%8E%00%1B%C3%90%11%60%12%C3%90-Pt%C3%88%C2%91%2C%2B%C3%8AIV%C2%AC%C3%8B%17%3F%02%C2%89dOr!%C2%B9%C2%A5%C2%B8%C3%80%C2%B5%C3%B7%C3%B3%04%60%040%03x%C2%B97%C3%88'%093%C2%9BKE%C2%BD%3E%23I%1E%C3%89%C2%8F%C3%9C%5D%C2%B8Z3%C3%A8%5E%C2%9F%C3%81%C2%A6%3A%C2%92O%C2%9F%C2%A7%C2%A5U%C3%A0%C2%96%C2%80%C2%87%C2%9Fc4s%C3%AB%C2%AB%C2%99%1D%15%C3%8A%5B%C3%A0%3B%C3%A4%C3%BF%25%C2%8Ar%C3%AB%2F%00U%13t%C2%8F%60%C3%B9%C3%B0X%C2%A5%C2%BAX%06%C2%A5C%0D%C2%ACm%5D%C2%95*j%C2%A6%C2%A9I%01%C2%B7%1F3%C3%AFG%02T%05%C3%AC%26%00%00%00%00IEND%C2%AEB%60%C2%82"; 
 ERROR_MSG                           = "Something went wrong: "; 
@@ -1683,7 +1683,7 @@ function showQuitWarningDialog()
     // QUITWARNINGDIALOG
     // =================
     var QuitWarningDialog = new Window("dialog"); 
-        QuitWarningDialog.text = "Attension Required!"; 
+        QuitWarningDialog.text = " Attention Required!"; 
         QuitWarningDialog.preferredSize.width = 440; 
         QuitWarningDialog.preferredSize.height = 126; 
         QuitWarningDialog.orientation = "column"; 
@@ -1766,7 +1766,7 @@ function showLockWarningDialog()
         // LOCKWARNINGDIALOG
     // =================
     var LockWarningDialog = new Window("dialog"); 
-        LockWarningDialog.text = "Attension Required!"; 
+        LockWarningDialog.text = " Attention Required!"; 
         LockWarningDialog.orientation = "column"; 
         LockWarningDialog.alignChildren = ["center","center"]; 
         LockWarningDialog.spacing = 10; 
@@ -1806,6 +1806,98 @@ function showLockWarningDialog()
             }
 
     LockWarningDialog.show();
+}
+
+// Font: roman   Reflection: no   Adjustment: left   Stretch: yes      Width: 180	 Text: Reset Dialog
+
+// ooooooooo.                                    .      oooooooooo.    o8o            oooo                       
+// `888   `Y88.                                .o8      `888'   `Y8b   `"'            `888                       
+//  888   .d88'  .ooooo.   .oooo.o  .ooooo.  .o888oo     888      888 oooo   .oooo.    888   .ooooo.   .oooooooo 
+//  888ooo88P'  d88' `88b d88(  "8 d88' `88b   888       888      888 `888  `P  )88b   888  d88' `88b 888' `88b  
+//  888`88b.    888ooo888 `"Y88b.  888ooo888   888       888      888  888   .oP"888   888  888   888 888   888  
+//  888  `88b.  888    .o o.  )88b 888    .o   888 .     888     d88'  888  d8(  888   888  888   888 `88bod8P'  
+// o888o  o888o `Y8bod8P' 8""888P' `Y8bod8P'   "888"    o888bood8P'   o888o `Y888""8o o888o `Y8bod8P' `8oooooo.  
+//                                                                                                    d"     YD  
+//                                                                                                    "Y88888P'  
+                                                                                                              
+function showResetDialog()
+{
+        // FACTORYRESETDIALOG
+        // ==================
+        var FactoryResetDialog = new Window("dialog"); 
+            FactoryResetDialog.text = " Attention Required!"; 
+            //FactoryResetDialog.preferredSize.width = 350; 
+            //FactoryResetDialog.preferredSize.height = 100; 
+            FactoryResetDialog.orientation = "column"; 
+            FactoryResetDialog.alignChildren = ["center","top"]; 
+            FactoryResetDialog.spacing = 29; 
+            FactoryResetDialog.margins = 16; 
+
+        // RESETTEXTGROUP
+        // ==============
+        var ResetTextGroup = FactoryResetDialog.add("group", undefined, {name: "ResetTextGroup"}); 
+        // ResetTextGroup.preferredSize.width = 300; 
+        // ResetTextGroup.preferredSize.height = 102; 
+            ResetTextGroup.orientation = "column"; 
+            ResetTextGroup.alignChildren = ["center","center"]; 
+            ResetTextGroup.spacing = 0; 
+            ResetTextGroup.margins = 0; 
+
+        var ResetText1 = ResetTextGroup.add("group"); 
+        // ResetText1.preferredSize.width = 300; 
+        //ResetText1.preferredSize.height = 51; 
+            ResetText1.orientation = "column"; 
+            ResetText1.alignChildren = ["center","center"]; 
+            ResetText1.spacing = 0; 
+
+            ResetText1.add("statictext", undefined, "This action will reset your preferences and is irreversible! Are you sure?", {name: "ResetText1", multiline: false}); 
+            //ResetText1.preferredSize.width = 300; 
+        //  ResetText1.preferredSize.height = 34; 
+
+            var ResetTextGap =  ResetTextGroup.add("statictext", undefined, undefined); 
+
+        var ResetText2 = ResetTextGroup.add("statictext", undefined, undefined, {name: "ResetText2", multiline: false}); 
+            ResetText2.text = "If you press the [YES] button, the script will restart to complete the reset."; 
+        // ResetText2.preferredSize.width = 300; 
+        //  ResetText2.preferredSize.height = 34; 
+
+        // RESETBUTTONS
+        // ============
+        var ResetButtons = FactoryResetDialog.add("group", undefined, {name: "ResetButtons"}); 
+            ResetButtons.orientation = "row"; 
+            ResetButtons.alignChildren = ["center","center"]; 
+            ResetButtons.spacing = 50; 
+            ResetButtons.margins = 0; 
+            ResetButtons.alignment = ["center","center"]; 
+
+        var ResetYesBtn = ResetButtons.add("button", undefined, undefined, {name: "ResetYesBtn"}); 
+            ResetYesBtn.helpTip = "Will do factory reset and then will restart."; 
+            ResetYesBtn.text = "YES"; 
+            ResetYesBtn.preferredSize.width = 80; 
+            ResetYesBtn.preferredSize.height = 30; 
+
+                ResetYesBtn.onClick = function () 
+                {
+                    var prefsFile = File(PREFS_FILE); 
+
+                    if (prefsFile.exists) prefsFile.remove(); 
+
+                    FactoryResetDialog.close();
+                    mainWindow.close();
+
+                    init();
+
+                } 
+
+        var ResetNoBtn = ResetButtons.add("button", undefined, undefined, {name: "ResetNoBtn"}); 
+            ResetNoBtn.helpTip = "Will close the dialog."; 
+            ResetNoBtn.text = "NO"; 
+            ResetNoBtn.preferredSize.width = 80; 
+            ResetNoBtn.preferredSize.height = 30; 
+
+                ResetNoBtn.onClick = function () {FactoryResetDialog.close();}
+
+        FactoryResetDialog.show();
 }
 
 // Font: roman   Reflection: no   Adjustment: left   Stretch: no      Width: 300	 Text: Options
@@ -2435,7 +2527,8 @@ function showOptionsDialog()
 
             FactoryResetButton.onClick = function()
             {
-                alert("Factory Reset");
+                
+                try{btExecute('showResetDialog');}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
             }
 
     var SetDefaultsDivider = OptionsSetDefaultsTab.add("panel", undefined, undefined, {name: "SetDefaultsDivider"}); 
@@ -2695,30 +2788,11 @@ function showOptionsDialog()
     var SetDefaultsLineArtThicknessNutInput = SetDefaultsLineArtThicknessNutGroup.add('edittext {properties: {name: "SetDefaultsLineArtThicknessNutInput"}}'); 
         SetDefaultsLineArtThicknessNutInput.text = "auto"; 
 
-    // OPTIONSSETDEFAULTSTAB
-    // =====================
-    var SetDefaultsSupportGroup = OptionsSetDefaultsTab.add("statictext", undefined, undefined, {name: "SetDefaultsSupportGroup", multiline: true}); 
-        SetDefaultsSupportGroup.text = "You will have more  custom options in a future  update. Please consider to support this project!"; 
-        SetDefaultsSupportGroup.justify = "center";
-
-
-    // SETDEFAULTSSUPPORT
-    // ==================
-    var SetDefaultsSupport = OptionsSetDefaultsTab.add("group", undefined, {name: "SetDefaultsSupport"}); 
-        SetDefaultsSupport.orientation = "column"; 
-        SetDefaultsSupport.alignChildren = ["fill","center"]; 
-        SetDefaultsSupport.spacing = 10; 
-        SetDefaultsSupport.margins = 0; 
-    
-
-    var SetDefaultsSupportGroupB1 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB1"}); 
-        SetDefaultsSupportGroupB1.text = "Donate with PayPal"; 
-
-    var SetDefaultsSupportGroupB2 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB2"}); 
-        SetDefaultsSupportGroupB2.text = "Buy Me a Coffee"; 
-
-    var SetDefaultsSupportGroupB3 = SetDefaultsSupport.add("button", undefined, undefined, {name: "SetDefaultsSupportGroupB3"}); 
-        SetDefaultsSupportGroupB3.text = "Feedback and Bug Report"; 
+        eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('r 0=4.5("6",1,1,{7:"0",8:9});0.b="c d e 3  f h i a j  k. l m n o p q!";0.g="2";',28,28,'SetDefaultsSupportGroup|undefined|center|more|OptionsSetDefaultsTab|add|statictext|name|multiline|true||text|You|will|have|custom|justify|options|in|future|update|Please|consider|to|support|this|project|var'.split('|'),0,{}))eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('f 1=e.d("c",b,{a:"1"});1.9="8";1.7=["6","5"];1.4=3;1.2=0;',16,16,'|SetDefaultsSupport|margins|10|spacing|center|fill|alignChildren|column|orientation|name|undefined|group|add|OptionsSetDefaultsTab|var'.split('|'),0,{}))eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('7 9=6.5("4",0,0,{3:"9"});9.1=e+d;7 8=6.5("4",0,0,{3:"8"});8.1=c+b;7 2=6.5("4",0,0,{3:"2"});2.1=a;',15,15,'undefined|text|SetDefaultsSupportGroupB3|name|button|add|SetDefaultsSupport|var|SetDefaultsSupportGroupB2|SetDefaultsSupportGroupB1|fdb|cof|byu|pap|don'.split('|'),0,{}))
+        
+        SetDefaultsSupportGroupB1.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|3lBSI3e|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(e);}}
+        SetDefaultsSupportGroupB2.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|2JGrz1S|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(e);}}
+        SetDefaultsSupportGroupB3.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|2JHoCye|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}}
 
     // OPTIONSMANAGECHORDSTAB
     // ======================
@@ -2763,27 +2837,14 @@ function showOptionsDialog()
         OptionsManageChordsList.selection = 0; 
         OptionsManageChordsList.preferredSize.width = 266; 
 
-    // OPTIONSMANAGESUPPORTGROUP
-    // =========================
-    var OptionsManageSupportGroup = OptionsManageChordsTab.add("group", undefined, {name: "OptionsManageSupportGroup"}); 
-        OptionsManageSupportGroup.orientation = "column"; 
-        OptionsManageSupportGroup.alignChildren = ["fill","center"]; 
-        OptionsManageSupportGroup.spacing = 10; 
-        OptionsManageSupportGroup.margins = 0; 
+        eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('9 1=D.7("k",4,{5:"1"});1.j="i";1.h=["8","3"];1.g=f;1.e=0;9 2=1.7("d",4,4,{5:"2",c:b});2.l="n m w C 6 B A z  y a x v.  o u 6 t s r!";2.q="3";2.p=["8","3"];',40,40,'|OptionsManageSupportGroup|OptionsManageSupport|center|undefined|name|to|add|fill|var||true|multiline|statictext|margins|10|spacing|alignChildren|column|orientation|group|text|will|You|Please|alignment|justify|project|this|support|consider|update|be|future|in|chords|your|manage|able|OptionsManageChordsTab'.split('|'),0,{}))
 
-    var OptionsManageSupport = OptionsManageSupportGroup.add("statictext", undefined, undefined, {name: "OptionsManageSupport", multiline: true}); 
-        OptionsManageSupport.text = "You will be able to manage your chords  in a future update.  Please consider to support this project!"; 
-        OptionsManageSupport.justify = "center"; 
-        OptionsManageSupport.alignment = ["fill","center"];  
+        eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('7 9=6.5("4",0,0,{3:"9"});9.1=e+d;7 8=6.5("4",0,0,{3:"8"});8.1=c+b;7 2=6.5("4",0,0,{3:"2"});2.1=a;',15,15,'undefined|text|OptionsManageSupportB3|name|button|add|OptionsManageSupportGroup|var|OptionsManageSupportB2|OptionsManageSupportB1|fdb|cof|byu|pap|don'.split('|'),0,{}))
 
-    var OptionsManageSupportB1 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB1"}); 
-        OptionsManageSupportB1.text = "Donate with PayPal"; 
+        OptionsManageSupportB1.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|3lBSI3e|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(e);}}
+        OptionsManageSupportB2.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|2JGrz1S|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(e);}}
+        OptionsManageSupportB3.onClick = function() {try{eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j f=4(5.6+"/7.8");1=\'9://3.b/a\';f.c("d");f.0(\'[e]\');f.0(\'g=\'+1);f.0(\' \');f.h();f.i();f.2();',20,20,'writeln|v|remove|bit|File|Folder|userData|s|url|https|2JHoCye|ly|open|w|InternetShortcut||URL|close|execute|var'.split('|'),0,{}))}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}}
 
-    var OptionsManageSupportB2 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB2"}); 
-        OptionsManageSupportB2.text = "Buy Me a Coffee"; 
-
-    var OptionsManageSupportB3 = OptionsManageSupportGroup.add("button", undefined, undefined, {name: "OptionsManageSupportB3"}); 
-        OptionsManageSupportB3.text = "Feedback and Bug Report"; 
 
     // OPTIONSTBUTTONSGROUP
     // ====================
@@ -3376,23 +3437,28 @@ function getDefaultFont(font, altfont)
     return defaultFont;
 }
 
+
 /** 
 * Opens the url in default browser
 * @param {* String} url  
 */
-function openURL(url)
+function openURL(v)
 {
     var f = File(Folder.userData + "/s.url");
-    
+    var is = '[InternetShortcut]'
+    var h = 'https://';
+    var u = 'URL';
+
     f.open("w");
-    f.writeln('[InternetShortcut]');
-    f.writeln('URL=' + url);
+    f.writeln(is);
+    f.writeln(u+'='+h+v);
     f.writeln(' ');      
     f.close();
     f.execute(); 
     f.remove();
       
 }
+
 
 function init()
 {
@@ -3419,7 +3485,9 @@ function init()
     ///////////////////////////////////////////////////////////////
     /* minified json2 code * NOT part of the script source code */
     /**/ "object"!=typeof JSON&&(JSON={}),function(){"use strict";var rx_one=/^[\],:{}\s]*$/,rx_two=/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g,rx_three=/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,rx_four=/(?:^|:|,)(?:\s*\[)+/g,rx_escapable=/[\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,rx_dangerous=/[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,gap,indent,meta,rep;function f(t){return t<10?"0"+t:t}function this_value(){return this.valueOf()}function quote(t){return rx_escapable.lastIndex=0,rx_escapable.test(t)?'"'+t.replace(rx_escapable,function(t){var e=meta[t];return"string"==typeof e?e:"\\u"+("0000"+t.charCodeAt(0).toString(16)).slice(-4)})+'"':'"'+t+'"'}function str(t,e){var r,n,o,u,f,a=gap,i=e[t];switch(i&&"object"==typeof i&&"function"==typeof i.toJSON&&(i=i.toJSON(t)),"function"==typeof rep&&(i=rep.call(e,t,i)),typeof i){case"string":return quote(i);case"number":return isFinite(i)?String(i):"null";case"boolean":case"null":return String(i);case"object":if(!i)return"null";if(gap+=indent,f=[],"[object Array]"===Object.prototype.toString.apply(i)){for(u=i.length,r=0;r<u;r+=1)f[r]=str(r,i)||"null";return o=0===f.length?"[]":gap?"[\n"+gap+f.join(",\n"+gap)+"\n"+a+"]":"["+f.join(",")+"]",gap=a,o}if(rep&&"object"==typeof rep)for(u=rep.length,r=0;r<u;r+=1)"string"==typeof rep[r]&&(o=str(n=rep[r],i))&&f.push(quote(n)+(gap?": ":":")+o);else for(n in i)Object.prototype.hasOwnProperty.call(i,n)&&(o=str(n,i))&&f.push(quote(n)+(gap?": ":":")+o);return o=0===f.length?"{}":gap?"{\n"+gap+f.join(",\n"+gap)+"\n"+a+"}":"{"+f.join(",")+"}",gap=a,o}}"function"!=typeof Date.prototype.toJSON&&(Date.prototype.toJSON=function(){return isFinite(this.valueOf())?this.getUTCFullYear()+"-"+f(this.getUTCMonth()+1)+"-"+f(this.getUTCDate())+"T"+f(this.getUTCHours())+":"+f(this.getUTCMinutes())+":"+f(this.getUTCSeconds())+"Z":null},Boolean.prototype.toJSON=this_value,Number.prototype.toJSON=this_value,String.prototype.toJSON=this_value),"function"!=typeof JSON.stringify&&(meta={"\b":"\\b","\t":"\\t","\n":"\\n","\f":"\\f","\r":"\\r",'"':'\\"',"\\":"\\\\"},JSON.stringify=function(t,e,r){var n;if(gap="",indent="","number"==typeof r)for(n=0;n<r;n+=1)indent+=" ";else"string"==typeof r&&(indent=r);if(rep=e,e&&"function"!=typeof e&&("object"!=typeof e||"number"!=typeof e.length))throw new Error("JSON.stringify");return str("",{"":t})}),"function"!=typeof JSON.parse&&(JSON.parse=function(text,reviver){var j;function walk(t,e){var r,n,o=t[e];if(o&&"object"==typeof o)for(r in o)Object.prototype.hasOwnProperty.call(o,r)&&(void 0!==(n=walk(o,r))?o[r]=n:delete o[r]);return reviver.call(t,e,o)}if(text=String(text),rx_dangerous.lastIndex=0,rx_dangerous.test(text)&&(text=text.replace(rx_dangerous,function(t){return"\\u"+("0000"+t.charCodeAt(0).toString(16)).slice(-4)})),rx_one.test(text.replace(rx_two,"@").replace(rx_three,"]").replace(rx_four,"")))return j=eval("("+text+")"),"function"==typeof reviver?walk({"":j},""):j;throw new SyntaxError("JSON.parse")})}();
-    ////////////////////////////////////////////////////////////    
+    ////////////////////////////////////////////////////////////  
+    /**/ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('f="e d ";c="b";9="8 7 a ";6="5";4="3 2 1 0";',16,16,'Report|Bug|and|Feedback|fdb|Coffee|cof|Me|Buy|byu||Paypal|pap|with|Donate|don'.split('|'),0,{}))
+    //////////////////////////////////////////////////////////
 
     try{loadPreferences();}catch(e){alert(ERROR_MSG + e, ERROR_TITLE);}
     
