@@ -3,6 +3,10 @@
 ```
 
 ```
+## [0.4.2] 
+### Added
+- The About dialog
+- The functionality of about dialog buttons
 
 ## [0.4.0] 
 ### Added
