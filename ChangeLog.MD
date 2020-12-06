@@ -3,6 +3,13 @@
 ```
 
 ```
+## [0.7.0] beta 
+### Added
+- Functionality of the [Draw Chord] Button
+- The chord engine (migrated from deprecated repo)
+- Applied the Fonts on the chord Engine
+- Renamed the script from 'ChordDiagramCreator.jsx' to 'Chord Diagram Creator.jsx'
+
 ## [0.4.2] 
 ### Added
 - The About dialog
