@@ -33,13 +33,13 @@ You can use any font you like with the Chord Diagram Creator, as long as it is i
 
 ### How To install Illustrator Scripts on **Windows**
 
-1. Download the latest release of the script. 
+1. Download the ChordDiagramCreator.zip file from the [latest release](https://github.com/harpwood/Chord-Diagram-Creator-for-Adobe-Illustrator/releases) of the script and unzip it.
 2. Copy and paste the 'Chord Diagram Creator.jsx' in the folder '[Adobe Illustrator Installation folder]\Presets\\[Language]\Scripts'. An example path could be 'C:\Program Files\Adobe\Adobe Illustrator 2020\Presets\en_US\Scripts'.
 3. If Adobe Illustrator is open, you should close and restart. After restart you will find the script in the Main Menu of Adobe Illustrator File -> Scripts -> Chord Diagram Creator.
 
 ### How To install Illustrator Scripts on **MAC**
 
-1. Download the latest release of the script. .
+1. Download the ChordDiagramCreator.zip file from the [latest release](https://github.com/harpwood/Chord-Diagram-Creator-for-Adobe-Illustrator/releases) of the script and unzip it.
 
 2. Copy and paste the 'Chord Diagram Creator.jsx' in the folder 'Applications>Adobe  Illustrator>Presets>en_US>Scripts'.
 
