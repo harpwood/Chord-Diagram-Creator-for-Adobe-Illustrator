@@ -6,7 +6,7 @@ The "Chord Diagram Creator" is a handy script for Adobe Illustrator that will dr
 
 ![](./readme-assets/EmDemo.gif)
 
-
+Know issue: if you create a chord with empty name throws a silent exception error and draws only the base diagram (strings and frets). It will be fixed in the next update.
 
 ### Table of Contents
 
