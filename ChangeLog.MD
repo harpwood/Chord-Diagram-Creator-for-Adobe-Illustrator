@@ -3,6 +3,10 @@
 ```
 
 ```
+## [0.7.2] beta 
+### Fixed
+- Exception error, when the name of the chord is empty
+
 ## [0.7.1] beta 
 ### Refactoring
 

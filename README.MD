@@ -1,12 +1,12 @@
 # Chord Diagram Creator 
 
-## for Adobe Illustrator v0.7.1 beta
+## for Adobe Illustrator v0.7.2 beta
 
 The "Chord Diagram Creator" is a handy script for Adobe Illustrator that will draw chords for you! Here is a fast demonstration of the most basic functionality.
 
 ![](./readme-assets/EmDemo.gif)
 
-Know issue: if you create a chord with empty name throws a silent exception error and draws only the base diagram (strings and frets). It will be fixed in the next update.
+
 
 ### Table of Contents
 
